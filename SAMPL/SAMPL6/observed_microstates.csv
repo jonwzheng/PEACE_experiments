@@ -1,0 +1,19 @@
+SAMPL6 Molecule ID,rdkit_canon_smi,original_isomeric_smi,charge
+SM02,FC(F)(F)c1cccc(Nc2ncnc3ccccc23)c1,c1ccc2c(c1)c(ncn2)Nc3cccc(c3)C(F)(F)F,0
+SM02,FC(F)(F)c1cccc(Nc2nc[nH+]c3ccccc23)c1,c1ccc2c(c1)c(nc[nH+]2)Nc3cccc(c3)C(F)(F)F,1
+SM04,Clc1ccc(CNc2ncnc3ccccc23)cc1,c1ccc2c(c1)c(ncn2)NCc3ccc(cc3)Cl,0
+SM04,Clc1ccc(CNc2nc[nH+]c3ccccc23)cc1,c1ccc2c(c1)c(nc[nH+]2)NCc3ccc(cc3)Cl,1
+SM07,c1ccc(CNc2ncnc3ccccc23)cc1,c1ccc(cc1)CNc2c3ccccc3ncn2,0
+SM07,c1ccc(CNc2nc[nH+]c3ccccc23)cc1,c1ccc(cc1)CNc2c3ccccc3[nH+]cn2,1
+SM09,COc1cccc(Nc2ncnc3ccccc23)c1,COc1cccc(c1)Nc2c3ccccc3ncn2,0
+SM09,COc1cccc(Nc2nc[nH+]c3ccccc23)c1,COc1cccc(c1)Nc2c3ccccc3[nH+]cn2,1
+SM12,Clc1cccc(Nc2ncnc3ccccc23)c1,c1ccc2c(c1)c(ncn2)Nc3cccc(c3)Cl,0
+SM12,Clc1cccc(Nc2nc[nH+]c3ccccc23)c1,c1ccc2c(c1)c(nc[nH+]2)Nc3cccc(c3)Cl,1
+SM13,COc1cc2ncnc(Nc3cccc(C)c3)c2cc1OC,Cc1cccc(c1)Nc2c3cc(c(cc3ncn2)OC)OC,0
+SM13,COc1cc2[nH+]cnc(Nc3cccc(C)c3)c2cc1OC,Cc1cccc(c1)Nc2c3cc(c(cc3[nH+]cn2)OC)OC,1
+SM14,Nc1ccc2c(c1)ncn2-c1ccccc1,c1ccc(cc1)n2cnc3c2ccc(c3)N,0
+SM14,Nc1ccc2c(c1)[nH+]cn2-c1ccccc1,c1ccc(cc1)n2c[nH+]c3c2ccc(c3)N,1
+SM14,[NH3+]c1ccc2c(c1)[nH+]cn2-c1ccccc1,c1ccc(cc1)n2c[nH+]c3c2ccc(c3)[NH3+],2
+SM15,Oc1ccc(-n2cnc3ccccc32)cc1,c1ccc2c(c1)ncn2c3ccc(cc3)O,0
+SM15,[O-]c1ccc(-n2cnc3ccccc32)cc1,c1ccc2c(c1)ncn2c3ccc(cc3)[O-],-1
+SM15,Oc1ccc(-n2c[nH+]c3ccccc32)cc1,c1ccc2c(c1)[nH+]cn2c3ccc(cc3)O,1

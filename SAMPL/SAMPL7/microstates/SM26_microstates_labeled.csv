@@ -1,0 +1,6 @@
+microstate ID,canonical isomeric SMILES,charge
+SM26_micro000,CC(=O)NS(=O)(=O)CCc1ccccc1,0
+SM26_micro001,CC(=O)[N-]S(=O)(=O)CCc1ccccc1,-1
+SM26_micro002,C=C(NS(=O)(=O)CCc1ccccc1)O,0
+SM26_micro003,C=C([N-]S(=O)(=O)CCc1ccccc1)O,-1
+SM26_micro004,CC(=NS(=O)(=O)CCc1ccccc1)O,0

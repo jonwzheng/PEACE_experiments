@@ -1,0 +1,21 @@
+molecule,3-letter-symbol,1-letter-symbol,SMILES,solvent
+Alanine,Ala,A,C[C@H](N)C(=O)O,water
+Arginine,Arg,R,N=C(N)NCCC[C@H](N)C(=O)O,water
+Asparagine,Asn,N,NC(=O)C[C@H](N)C(=O)O,water
+Aspartic acid,Asp,D,N[C@@H](CC(=O)O)C(=O)O,water
+Cysteine,Cys,C,N[C@@H](CS)C(=O)O,water
+Glutamine,Gln,Q,NC(=O)CCC(N)C(=O)O,water
+Glutamic acid,Glu,E,N[C@@H](CCC(=O)O)C(=O)O,water
+Glycine,Gly,G,NCC(=O)O,water
+Histidine,His,H,N[C@@H](Cc1c[nH]cn1)C(=O)O,water
+Isoleucine,Ile,I,CC[C@H](C)[C@H](N)C(=O)O,water
+Leucine,Leu,L,CC(C)C[C@H](N)C(=O)O,water
+Lysine,Lys,K,NCCCC[C@H](N)C(=O)O,water
+Methionine,Met,M,CSCC[C@H](N)C(=O)O,water
+Phenylalanine,Phe,F,N[C@@H](Cc1ccccc1)C(=O)O,water
+Proline,Pro,P,O=C(O)[C@@H]1CCCN1,water
+Serine,Ser,S,N[C@@H](CO)C(=O)O,water
+Threonine,Thr,T,C[C@@H](O)[C@H](N)C(=O)O,water
+Tryptophan,Trp,W,N[C@@H](Cc1c[nH]c2ccccc12)C(=O)O,water
+Tyrosine,Tyr,Y,N[C@@H](Cc1ccc(O)cc1)C(=O)O,water
+Valine,Val,V,CC(C)[C@H](N)C(=O)O,water

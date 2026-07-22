@@ -1,0 +1,588 @@
+unique_ID,SMILES,original_IUPAC_names,seed_formal_charge,pka_type,required_charge,found,protomer_count,reason,expansion_stage
+perrin11,CC(N)=O,"methane, carbamoyl-",0,pKaH2,2,False,0,charge_state_unreachable,unlimited
+perrin1148,O=Cc1ccccn1,"pyridine, 2-formyl-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+perrin1149,O=Cc1cccnc1,"pyridine, 3-formyl-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+perrin1150,O=Cc1ccncc1,"pyridine, 4-formyl-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+perrin1153,COc1cccnc1C=O,"pyridine, 2-formyl-3-methoxy-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+perrin1154,COc1cnccc1C=O,"pyridine, 4-formyl-3-methoxy-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+perrin1271,CCC1C=[N+](C)CC(CC)C1.[O-][Cl+3]([O-])([O-])[O-],"3,5-Diethyl-1-methyl-2,3,4,5-tetrahydropyridinium perchlorate",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin1296,[O-][n+]1ccccc1,Pyridine 1-oxide,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin1301,Nc1ccc[n+]([O-])c1,"pyridine, 1-oxide, 3-amino-",0,pKaH2,2,False,0,charge_state_unreachable,unlimited
+perrin1302,Nc1cc[n+]([O-])cc1,"pyridine, 1-oxide, 4-amino-",0,pKaH2,2,False,0,charge_state_unreachable,unlimited
+perrin1303,Nc1cccc(-c2cccc[n+]2[O-])c1,"pyridine, 1-oxide, 2-m-aminophenyl-",0,pKaH2,2,False,0,charge_state_unreachable,unlimited
+perrin1304,Nc1ccc(-c2cccc[n+]2[O-])cc1,"pyridine, 1-oxide, 2-p-aminophenyl-",0,pKaH2,2,False,0,charge_state_unreachable,unlimited
+perrin1307,[O-][n+]1ccc(OCc2ccccc2)cc1,"pyridine, 1-oxide, 4-benzyloxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin1308,[O-][n+]1ccccc1SCc1ccccc1,"pyridine, 1-oxide, 2-benzylthio-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin1309,[O-][n+]1ccc(SCc2ccccc2)cc1,"pyridine, 1-oxide, 4-benzylthio-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin131,C[N+]([O-])(CCCl)CCCl,Methylbis(2-chloroethyl)amine N-oxide,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin1310,CCCCOC(=O)c1ccc[n+]([O-])c1,"pyridine, 1-oxide, 3-butoxycarbonyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin1311,O=C(O)c1ccc[n+]([O-])c1,"pyridine, 1-oxide, 3-carboxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin1312,O=C(O)c1cc[n+]([O-])cc1,"pyridine, 1-oxide, 4-carboxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin1315,CCOc1cccc[n+]1[O-],"pyridine, 1-oxide, 2-ethoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin1316,[O-][n+]1ccccc1O,"pyridine, 1-oxide, 2-hydroxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin1317,[O-][n+]1ccc(O)cc1,"pyridine, 1-oxide, 4-hydroxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin1318,[O-][n+]1ccccc1S,"pyridine, 1-oxide, 2-mercapto-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin1319,COc1cccc[n+]1[O-],"pyridine, 1-oxide, 2-methoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin1320,COc1cc[n+]([O-])cc1,"pyridine, 1-oxide, 4-methoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin1321,Cc1ccc[n+]([O-])c1,"pyridine, 1-oxide, 3-methyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin1322,Cc1cc[n+]([O-])cc1,"pyridine, 1-oxide, 4-methyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin1329,O=[N+]([O-])c1cc[n+]([O-])cc1,"pyridine, 1-oxide, 4-nitro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin133,CC[N+]([O-])(CC)CC,Triethylamine N-oxide,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin1330,O=[N+]([O-])c1cccc(-c2cccc[n+]2[O-])c1,"pyridine, 1-oxide, 2-m-nitrophenyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin1331,O=[N+]([O-])c1ccc(-c2cccc[n+]2[O-])cc1,"pyridine, 1-oxide, 2-p-nitrophenyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin1332,O=[N+]([O-])c1cccc(-c2ccc[n+]([O-])c2)c1,"pyridine, 1-oxide, 3-m-nitrophenyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin1333,O=[N+]([O-])c1cccc(-c2cc[n+]([O-])cc2)c1,"pyridine, 1-oxide, 4-m-nitrophenyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin1333a,O=[N+]([O-])c1ccc(-c2cc[n+]([O-])cc2)cc1,"pyridine, 1-oxide, 4-p-nitrophenyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin1334,[O-][n+]1ccccc1-c1ccccc1,"pyridine, 1-oxide, 2-phenyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin1335,[O-][n+]1cccc(-c2ccccc2)c1,"pyridine, 1-oxide, 3-phenyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin1336,[O-][n+]1ccc(-c2ccccc2)cc1,"pyridine, 1-oxide, 4-phenyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin134,CC(=O)NCC(C)C,"propane, 1-acetamido-2-methyl-",0,pKaH2,2,False,0,charge_state_unreachable,unlimited
+perrin1378,CC1C=[N+](C)CC1C.[O-][Cl+3]([O-])([O-])[O-],"1,3,4-Trimethyl-1-pyrrolinium, perchlorate-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin176,CC(CC(C(=O)O)(c1ccccc1)c1ccccc1)N(C)C,"propane, 1-carboxy-3-dimethylamino-3-methyl-1,1-diphenyl-",0,pKa2,-2,False,0,charge_state_unreachable,unlimited
+perrin1922,[O-][n+]1ccc2ccccc2c1,Isoquinoline-2-oxide,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin1948,O=S(=O)(O)c1cc(Br)c(O)c2ncccc12,"quinoline, 7-bromo-8-hydroxy-5-sulpho-",0,pKa3,-3,False,0,charge_state_unreachable,unlimited
+perrin1968,O=S(=O)(O)c1cc(Cl)c(O)c2ncccc12,"quinoline, 7-chloro-8-hydroxy-5-sulpho-",0,pKa3,-3,False,0,charge_state_unreachable,unlimited
+perrin2027,Oc1c(CN2CCCCC2)ccc2cccnc12,"quinoline, 8-hydroxy-7-(1-piperidyl)methyl-",0,pKa2,-2,False,0,charge_state_unreachable,unlimited
+perrin2084,[O-][n+]1cccc2ccccc21,Quinoline 1-oxide,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin2085,Nc1cc[n+]([O-])c2ccccc12,"Quinoline 1-oxide, 4-amino-",0,pKaH2,2,False,0,charge_state_unreachable,unlimited
+perrin2086,[O-][n+]1c(O)ccc2ccccc21,"Quinoline 1-oxide, 2-hydroxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin229,CCCCNC(C)=O,"butane, 1-acetamido-",0,pKaH2,2,False,0,charge_state_unreachable,unlimited
+perrin2366,c1cnc2ncncc2n1,Pteridine,0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+perrin2450,Cn1c(=O)ncc2nccnc21,"pteridine, 1,2-dihydro-1-methyl-2-oxo-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+perrin2452,Cn1cc2nccnc2nc1=O,"pteridine, 2,3-dihydro-3-methyl-2-oxo-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+perrin2461,Cc1nc2cnc(=O)nc-2n(C)c1C,"pteridine, 2,8-dihydro-6,7,8-trimethyl-2-oxo-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+perrin2672,O=C(O)c1ccc2nc3ccccc3cc2c1,"acridine, 2-carboxy-",0,pKaH2,2,False,0,charge_state_unreachable,unlimited
+perrin2673,O=C(O)c1cccc2cc3ccccc3nc12,"acridine, 4-carboxy-",0,pKaH2,2,False,0,charge_state_unreachable,unlimited
+perrin2706,C[n+]1c2ccccc2cc2ccccc21.[Br-],10-Methylacridinium bromide,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin2731,Cc1c2ccccc2c2ccccc2[n+]1C.[Cl-],"5,6-Dimethylphenanthridinium chloride",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin2732,C[n+]1cc2ccccc2c2ccccc21.[Cl-],5-Methylphenanthridinium chloride,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin28,CNC(C)=O,"methane, methylcarbamoyl-",0,pKaH2,2,False,0,charge_state_unreachable,unlimited
+perrin2817,Cc1cc2nc3ccc(N(C)C)cc3nc2cc1N,"phenazine, 2-amino-8-dimethylamino-3-methyl-",0,pKaH5,5,False,0,charge_state_unreachable,unlimited
+perrin3,NCC(N)=O,"methane, C-amino-C-carbamoyl-",0,pKaH3,3,False,0,charge_state_unreachable,unlimited
+perrin3097,C[N+](C)(C)c1ccc(C(=O)[O-])cc1,p-Benzbetaine,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3099,C[N+](C)(C)CC(=O)[O-],Betaine,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3100,C[N+](C)(C)CCCC(=O)[O-],γ-Butyrobetaine,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin32,C[N+](C)(C)[O-],Trimethylamine N-oxide,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3411,CC(=O)O,Acetic acid,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3412,CC(C)=O,Acetone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3413,CC(=O)c1ccccc1,Acetophenone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3414,O=C(C=Cc1ccccc1)c1ccccc1,"acetophenone, benzal-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3415,CC(=O)c1cccc(Br)c1,"acetophenone, m-bromo-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3416,CC(=O)c1ccc(Br)cc1,"acetophenone, p-bromo-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3417,CC(=O)c1cccc(Cl)c1,"acetophenone, m-chloro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3418,CC(=O)c1ccc(Cl)cc1,"acetophenone, p-chloro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3419,CC(=O)c1c(C)cccc1C,"acetophenone, 2,6-dimethyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3420,CCOc1cccc(C(C)=O)c1,"acetophenone, m-ethoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3421,CCOc1ccc(C(C)=O)cc1,"acetophenone, p-ethoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3422,CCc1ccc(C(C)=O)cc1,"acetophenone, p-ethyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3423,CC(=O)c1ccc(F)cc1,"acetophenone, p-fluoro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3424,CC(=O)c1cccc(O)c1,"acetophenone, m-hydroxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3425,CC(=O)c1ccc(O)cc1,"acetophenone, p-hydroxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3426,COc1cccc(C(C)=O)c1,"acetophenone, m-methoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3427,COc1ccc(C(C)=O)cc1,"acetophenone, p-methoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3428,CC(=O)c1cccc(C)c1,"acetophenone, m-methyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3429,CC(=O)c1ccc(C)cc1,"acetophenone, p-methyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3430,CC(=O)c1cccc([N+](=O)[O-])c1,"acetophenone, m-nitro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3431,CC(=O)c1ccc([N+](=O)[O-])cc1,"acetophenone, p-nitro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3432,CC(=O)c1c(C)cc(C)cc1C,"acetophenone, 2,4,6-trimethyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3435,COc1ccccc1,Anisole,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3436,c1cc2ccc3cc4cccc5ccc6cc(c1)c2c3c6c54,Anthanthrene,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3437,O=c1c2ccc3cccc4c(=O)c5ccc6cccc1c6c5-c2c34,Anthanthrone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3438,c1ccc2cc3ccccc3cc2c1,Anthracene,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3440,O=C1c2ccccc2Cc2ccccc21,Anthrone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3441,O=Cc1ccccc1,Benzaldehyde,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3442,O=Cc1cccc(Cl)c1,"benzaldehyde, m-chloro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3443,O=Cc1ccc(Cl)cc1,"benzaldehyde, p-chloro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3444,COc1ccc(C=O)cc1,"benzaldehyde, p-methoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3445,Cc1ccccc1C=O,"benzaldehyde, o-methyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3446,Cc1cccc(C=O)c1,"benzaldehyde, m-methyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3447,Cc1ccc(C=O)cc1,"benzaldehyde, p-methyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3448,O=Cc1ccc([N+](=O)[O-])cc1,"benzaldehyde, p-nitro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3449,CCc1cc(CC)c(C=O)c(CC)c1,"benzaldehyde, 2,4,6-triethyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3450,CC(C)c1cc(C(C)C)c(C=O)c(C(C)C)c1,"benzaldehyde, 2,4,6-triisopropyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3451,Cc1cc(C)c(C=O)c(C)c1,"benzaldehyde, 2,4,6-trimethyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3466,c1ccc2cc3c(ccc4ccccc43)cc2c1,Benzanthracene,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3467,O=C1c2ccccc2-c2cccc3cccc1c23,Benzanthrone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3468,CCCCOc1ccccc1,"benzene, n-butoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3469,CCC(C)Oc1ccccc1,"benzene, s-butoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3470,CCOc1ccccc1,"benzene, ethoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3471,Cc1c(C)c(C)c(C)c(C)c1C,"benzene, hexamethyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3472,CC(C)COc1ccccc1,"benzene, isobutoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3473,CC(C)Oc1ccccc1,"benzene, isopropoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3474,COc1ccccc1,"benzene, methoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3475,CCCCCOc1ccccc1,"benzene, pentyloxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3476,CCCOc1ccccc1,"benzene, n-propoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3477,O=C(O)c1ccccc1,Benzoic acid,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3478,O=C(O)c1ccccc1Br,"benzoic acid, 2-bromo-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3479,O=C(O)c1cccc(Br)c1,"benzoic acid, 3-bromo-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3480,CC(C)(C)c1ccccc1C(=O)O,"benzoic acid, 2-t-butyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3481,CC(C)(C)c1ccc(C(=O)O)cc1,"benzoic acid, 4-t-butyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3482,O=C(O)c1ccccc1C(=O)O,"benzoic acid, 2-carboxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3483,O=C(O)c1cccc(C(=O)O)c1,"benzoic acid, 3-carboxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3484,O=C(O)c1ccc(C(=O)O)cc1,"benzoic acid, 4-carboxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3485,O=C(O)c1ccccc1Cl,"benzoic acid, 2-chloro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3486,O=C(O)c1cccc(Cl)c1,"benzoic acid, 3-chloro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3487,O=C(O)c1ccc(Cl)cc1,"benzoic acid, 4-chloro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3488,CCOc1ccccc1C(=O)O,"benzoic acid, 2-ethoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3489,CCOc1cccc(C(=O)O)c1,"benzoic acid, 3-ethoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3490,CCOc1ccc(C(=O)O)cc1,"benzoic acid, 4-ethoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3491,CCc1ccccc1C(=O)O,"benzoic acid, 2-ethyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3492,CCc1ccc(C(=O)O)cc1,"benzoic acid, 4-ethyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3493,O=C(O)c1ccccc1F,"benzoic acid, 2-fluoro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3494,O=C(O)c1cccc(F)c1,"benzoic acid, 3-fluoro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3495,O=C(O)c1ccc(F)cc1,"benzoic acid, 4-fluoro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3496,O=C(O)c1ccccc1O,"benzoic acid, 2-hydroxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3497,O=C(O)c1cccc(O)c1,"benzoic acid, 3-hydroxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3498,O=C(O)c1ccc(O)cc1,"benzoic acid, 4-hydroxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3499,O=C(O)c1ccccc1I,"benzoic acid, 2-iodo-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3500,O=C(O)c1cccc(I)c1,"benzoic acid, 3-iodo-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3501,O=C(O)c1ccc(I)cc1,"benzoic acid, 4-iodo-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3502,CC(C)c1ccccc1C(=O)O,"benzoic acid, 2-isopropyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3503,COc1ccccc1C(=O)O,"benzoic acid, 2-methoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3504,COc1cccc(C(=O)O)c1,"benzoic acid, 3-methoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3505,COc1ccc(C(=O)O)cc1,"benzoic acid, 4-methoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3506,Cc1ccccc1C(=O)O,"benzoic acid, 2-methyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3507,Cc1cccc(C(=O)O)c1,"benzoic acid, 3-methyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3508,Cc1ccc(C(=O)O)cc1,"benzoic acid, 4-methyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3509,O=C(O)c1ccccc1[N+](=O)[O-],"benzoic acid, 2-nitro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3510,O=C(O)c1cccc([N+](=O)[O-])c1,"benzoic acid, 3-nitro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3511,O=C(O)c1ccc(-c2ccccc2)cc1,"benzoic acid, 4-phenyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3512,Cc1cc(C)c(C(=O)O)c(C)c1,"benzoic acid, 2,4,6-trimethyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3514,c1ccc2c(c1)cc1cccc3c4cccc5cccc(c54)c2c13,Benzoperylene,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3515,O=c1cc2c3cccc4cc5ccccc5c(c5cccc(c1=O)c25)c43,Benzoperylenequinone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3516,O=C(c1ccccc1)c1ccccc1,Benzophenone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3517,c1ccc2c(c1)c1cccc3ccc4cccc2c4c31,Benzopyrene,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3518,O=C1C=C(O)C(=O)C=C1O,"1,4-Benzoquinone, 2,5-dihydroxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3518,O=C1C=C(O)C(=O)C=C1O,"1,4-Benzoquinone, 2,5-dihydroxy-",0,pKaH2,2,False,0,charge_state_unreachable,unlimited
+perrin3519,CC1(C)CCCOc2ccccc21,"1-Benzoxepin, 2,3,4,5-tetrahydro-5,5-dimethyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3520,Cc1cc(C)c(CO)c(C)c1,"benzyl, 2,4,6-trimethyl-  alcohol-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3521,O=C(c1ccccc1)c1ccc(-c2ccccc2)cc1,"biphenyl, p-benzoyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3522,CC1(C)[C@@H]2CC[C@]1(C)[C@](O)(c1ccccc1)C2,"borneol, 2-phenyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3523,CC(C)(C)O,t-Butanol,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3524,CCCC(=O)c1ccccc1,p-nitroaniline-Butyrophenone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3525,O=C1CCC1,Cyclobutanone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3526,O=C1CCCCCC1,Cycloheptanone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3527,O=C1CCCCC1,Cyclohexanone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3528,O=C1CCCCCCC1,Cyclooctanone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3529,O=C1CCCC1,Cyclopentanone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3530,CC(=O)CC(C)(C)O,Diacetone alcohol,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3532,c1ccc2c(c1)c1ccc3ccc4ccc5ccc6c7ccccc7c2c2c1c3c4c5c62,Dibenzocoronene,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3533,c1ccc2c(c1)cc1ccc3cccc4c5ccccc5c2c1c34,Dibenzopyrene,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3533,c1ccc2c(c1)cc1ccc3cccc4c5ccccc5c2c1c34,Dibenzopyrene,0,pKaH2,2,False,0,charge_state_unreachable,unlimited
+perrin3535,CCCCOCCCC,"di-n-butyl, ether-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3536,CCOCC,Diethyl ether,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3539,CC(C)OC(C)C,Di-isopropyl ether,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3540,Cc1cc(C)c(C(O)c2c(C)cc(C)cc2C)c(C)c1,Dimesitylcarbinol,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3541,COC,Dimethyl ether,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3542,O=[N+]([O-])c1ccc(Cl)c([N+](=O)[O-])c1,"2,4-Dinitrochlorobenzene",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3543,Cc1ccc([N+](=O)[O-])cc1[N+](=O)[O-],"2,4-Dinitrotoluene",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3544,C1COCCO1,"1,4-Dioxan",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3545,OC(c1ccccc1)c1ccccc1,Diphenylcarbinol,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3546,CC(C)(C)c1ccc(C(O)c2ccc(C(C)(C)C)cc2)cc1,"diphenylcarbinol, 4,4'-di-t-butyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3547,OC(c1ccc(Cl)cc1)c1ccc(Cl)cc1,"diphenylcarbinol, 4,4'-dichloro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3548,COc1ccc(C(O)c2ccc(OC)cc2)cc1,"diphenylcarbinol, 4,4'-dimethoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3549,Cc1ccccc1C(O)c1ccccc1C,"diphenylcarbinol, 2,2'-dimethyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3550,Cc1ccc(C(O)c2ccc(C)cc2)cc1,"diphenylcarbinol, 4,4'-dimethyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3551,CCCOCCC,"di-n-propyl, ether-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3552,COCCOC,"ethane, 1,2-dimethoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3553,CCCCOCC,"ethyl, n-butyl ether-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3554,CCOC(C)(C)C,"ethyl, t-butyl ether-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3555,CCOC(C)=O,Ethyl acetate,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3556,CCOC(=O)c1ccccc1,Ethyl benzoate,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3557,O=c1cc(-c2ccccc2)oc2ccccc12,Flavone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3558,COc1ccc(-c2cc(=O)c3ccccc3o2)cc1,"flavone, 4'-methoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3559,COc1cc(C)c(-c2cc(=O)c3ccccc3o2)c(C)c1,"flavone, 4-methoxy-2',6'-dimethyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3560,Cc1cc(C)c(-c2oc3ccccc3c(=O)c2C)c(C)c1,"flavone, 3,2',4',6'-tetramethyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3561,Cc1cc(C)c(-c2cc(=O)c3ccccc3o2)c(C)c1,"flavone, 2',4',6'-trimethyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3561a,Oc1ccc(-c2ccc3ccc(O)cc3[o+]2)cc1.[O-][Cl+3]([O-])([O-])[O-],"flavylium, perchlorate, 4',7-dihydroxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3562,OC1c2ccccc2-c2ccccc21,"fluorene, 9-hydroxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3563,CC1(O)c2ccccc2-c2ccccc21,"fluorene, 9-hydroxy-9-methyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3564,C=O,Formaldehyde,0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+perrin3564,C=O,Formaldehyde,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3566,C1CCOC1,"furan, tetrahydro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3567a,C[C@@H]1O[C@@H](CC1)C,"furan, tetrahydro-2,5-dimethyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3567b,C[C@@H]1O[C@H](CC1)C,"furan, tetrahydro-2,5-dimethyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3568,CC1CCCO1,"furan, tetrahydro-2-methyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3569,O=Cc1ccco1,Furfural,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3570,O=C(O)c1ccco1,2-Furoic acid,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3572,C1CCCOCC1,Hexamethylene oxide,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3573,CC(C)C(=O)c1ccccc1,Isobutyrophenone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3575,CC(C)O,Isopropanol,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3576,CC1(C)CCC2=C(O1)c1ccccc1C(=O)C2=O,β-Lapachone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3577,CC(=O)C=C(C)C,Mesityl oxide,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3579,CCCCOC,Methyl n-butyl ether,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3580,COC(C)(C)C,Methyl t-butyl ether,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3581,CC(=O)C(C)(C)C,Methyl t-butyl ketone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3582,C=C1c2ccccc2C(=O)c2ccccc21,Methyleneanthrone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3583,CCOC,Methyl ethyl ether,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3584,CCC(C)=O,Methyl ethyl ketone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3585,COC(C)C,Methyl isopropyl ether,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3586,CC(=O)C(C)C,Methyl isopropyl ketone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3587,CCCOC,Methyl n-propyl ether,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3588,O=C1c2ccccc2C(=O)c2cc3ccccc3cc21,Naphthacenequinone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3589,c1ccc(Cc2ccc3ccccc3c2)cc1,"naphthalene, β-benzyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3591,O=C(O)c1cccc2ccccc12,α-Naphthoic acid,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3592,O=C(O)c1ccc2ccccc2c1,β-Naphthoic acid,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3593,O=C1C=CC(=O)c2ccccc21,p-Naphthoquinone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3594,CC(=O)c1ccc2ccccc2c1,β-Naphthyl methyl ketone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3595,O=[N+]([O-])c1ccccc1,Nitrobenzene,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3596,CC(C)(C)c1ccc([N+](=O)[O-])cc1,"Nitrobenzene, 4-t-butyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3597,O=[N+]([O-])c1cccc(Cl)c1,"Nitrobenzene, 3-chloro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3598,O=[N+]([O-])c1ccc(Cl)cc1,"Nitrobenzene, 4-chloro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3599,O=[N+]([O-])c1cccc(F)c1,"Nitrobenzene, 3-fluoro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3600,O=[N+]([O-])c1ccc(F)cc1,"Nitrobenzene, 4-fluoro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3601,O=[N+]([O-])c1ccc(O)cc1,p-Nitrophenol,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3602,Cc1cccc([N+](=O)[O-])c1,3-Nitrotoluene,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3603,Cc1ccc([N+](=O)[O-])cc1,4-Nitrotoluene,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3605,c1cc2cccc3c4cccc5cccc(c(c1)c23)c54,Perylene,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3606,O=c1ccc2c3ccc(=O)c4cccc(c5cccc1c52)c43,"3,10-Perylenequinone-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3607,O=C1C(=O)c2ccccc2-c2ccccc21,Phenanthraquinone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3608,Oc1ccccc1,Phenol,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3609,O=C(O)Cc1ccccc1,Phenylacetic acid,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3613,CCC(=O)c1ccccc1,Propiophenone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3614,C1CCOCC1,"pyran, tetrahydro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3615,c1ccc2c(c1)cc1ccc3cc4c5ccccc5cc5ccc6cc2c1c3c6c54,Pyranthrene,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3616,c1cc2ccc3cccc4ccc(c1)c2c34,Pyrene,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3617,O=c1ccocc1,4-Pyrone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3618,Cc1cc(=O)cc(C)o1,"4-Pyrone, 2,6-dimethyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3619,O=c1cc(-c2ccccc2)oc(-c2ccccc2)c1,"4-Pyrone, 2,6-diphenyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3620,Cc1cc(=O)cc(-c2ccccc2)o1,"4-Pyrone, 2-methyl-6-phenyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3621,c1ccc2cc3cc4ccccc4cc3cc2c1,Tetracene,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3622,C1CCSC1,"thiophene, tetrahydro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3623,OC(c1ccccc1)(c1ccccc1)c1ccccc1,Triphenylcarbinol,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3624,COc1ccc(C(O)(c2ccccc2)c2ccc(OC)cc2)cc1,"triphenylcarbinol, 4,4'-dimethoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3625,O=[N+]([O-])c1ccc(C(O)(c2ccccc2)c2ccc([N+](=O)[O-])cc2)cc1,"triphenylcarbinol, 4,4-dinitro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3626,COc1ccc(C(O)(c2ccc(OC)cc2OC)c2c(OC)cc(OC)cc2OC)c(OC)c1,"triphenylcarbinol, 2,4,6,2',4',2"",4""-heptamethoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3627,COc1ccc(C(O)(c2ccc(OC)cc2OC)c2ccc(OC)cc2OC)c(OC)c1,"triphenylcarbinol, 2,4,2',4',2"",4""-hexamethoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3628,COc1ccc(C(O)(c2ccccc2)c2ccccc2)cc1,"triphenylcarbinol, 4-methoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3629,Cc1ccc(C(O)(c2ccccc2)c2ccccc2)cc1,"triphenylcarbinol, 4-methyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3630,O=[N+]([O-])c1ccc(C(O)(c2ccccc2)c2ccccc2)cc1,"triphenylcarbinol, 4-nitro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3631,COc1ccc(C(O)(c2ccccc2OC)c2ccc(OC)cc2OC)c(OC)c1,"triphenylcarbinol, 2,4,2',4',2""-pentamethoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3632,CC(C)(C)c1ccc(C(O)(c2ccc(C(C)(C)C)cc2)c2ccc(C(C)(C)C)cc2)cc1,"triphenylcarbinol, 4,4',4""-tri-t-butyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3633,OC(c1cccc(Cl)c1)(c1cccc(Cl)c1)c1cccc(Cl)c1,"triphenylcarbinol, 3,3',3""-trichloro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3634,OC(c1ccc(Cl)cc1)(c1ccc(Cl)cc1)c1ccc(Cl)cc1,"triphenylcarbinol, 4,4',4""-trichloro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3635,CC(C)c1ccc(C(O)(c2ccc(C(C)C)cc2)c2ccc(C(C)C)cc2)cc1,"triphenylcarbinol, 4,4',4""-triisopropyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3636,COc1ccc(C(O)(c2ccc(OC)cc2)c2ccc(OC)cc2)cc1,"triphenylcarbinol, 4,4',4""-trimethoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3637,Cc1ccccc1C(O)(c1ccccc1C)c1ccccc1C,"triphenylcarbinol, 2,2',2""-trimethyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3638,Cc1cccc(C(O)(c2cccc(C)c2)c2cccc(C)c2)c1,"triphenylcarbinol, 3,3',3""-trimethyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3639,Cc1ccc(C(O)(c2ccc(C)cc2)c2ccc(C)cc2)cc1,"triphenylcarbinol, 4,4',4""-trimethyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3640,O=[N+]([O-])c1ccc(C(O)(c2ccc([N+](=O)[O-])cc2)c2ccc([N+](=O)[O-])cc2)cc1,"triphenylcarbinol, 4,4',4""-trinitro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3641,CC(C)(C)c1ccc(C(Cl)(c2ccccc2)c2ccccc2)cc1,"triphenylchloromethane, 4-t-butyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3642,CC(C)(C)c1ccc(C(Cl)(c2ccccc2)c2ccc(C(C)(C)C)cc2)cc1,"triphenylchloromethanc, 4,4'-di-t-butyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3643,c1ccc2c(c1)cc1ccc3c4ccc5cc6ccccc6c6ccc(c7ccc2c1c37)c4c56,Violanthrene A,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3644,c1ccc2c(c1)cc1ccc3c4ccc5cccc6c7ccccc7c(c7ccc2c1c37)c4c56,Violanthrene B,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3644,c1ccc2c(c1)cc1ccc3c4ccc5cccc6c7ccccc7c(c7ccc2c1c37)c4c56,Violanthrene B,0,pKaH2,2,False,0,charge_state_unreachable,unlimited
+perrin3656,Cc1cc(O)ccc1C1(c2ccc(O)cc2C)OS(=O)(=O)c2ccccc21,m-Cresol Purple,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3670,O=C1C=C/C(=C(/c2ccccc2)c2ccc(O)c3ccccc23)c2ccccc21,p-Naphtholbenzein,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3674,O=C1C=CC(=Nc2ccc(O)cc2)C=C1,Phenolindophenol,0,pKaH2,2,False,0,charge_state_unreachable,unlimited
+perrin3675,O=S1(=O)OC(c2ccc(O)cc2)(c2ccc(O)cc2)c2ccccc21,Phenolsulphonephthalein,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3688,Cc1cc(O)c(C(C)C)cc1C1(c2cc(C(C)C)c(O)cc2C)OS(=O)(=O)c2ccccc21,Thymol Blue,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3696,C[As](C)(=O)O,Cacodylic acid,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin3768,CP(C)C,"phosphine, trimethyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin596,Nc1cccc([N+](=O)[O-])c1,"aniline, 3-nitro-",0,pKaH2,2,False,0,charge_state_unreachable,unlimited
+perrin637,CC[N+]([O-])(CC)c1ccccc1,"N,N-Diethylaniline N-oxide",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin638,C[N+](C)([O-])c1ccccc1,"N,N-Dimethylaniline N-oxide",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin641,Cc1ccccc1[N+](C)(C)[O-],"N,N,2-Trimethylaniline N-oxide",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin642,Cc1ccc([N+](C)(C)[O-])cc1,"N,N,4-Trimethylaniline N-oxide",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin643,C[N+](C)(C)c1cccc(O)c1.[Cl-],3-Hydroxyphenyltrimethylammonium chloride,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin644,C[N+](C)(C)c1ccc(O)cc1.[Cl-],4-Hydroxyphenyltrimethylammonium chloride,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin822,[O-][N+](Cc1ccccc1)(Cc1ccccc1)Cc1ccccc1,"benzylamine-N-oxide, N,N-dibenzyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp4151,CCC(C)NCCNC(C)CC,"butane, 2-[2-(2-butylamino)ethyl]amino-",0,pKaH3,3,False,0,charge_state_unreachable,unlimited
+perrin_supp4529,Nc1cccc([N+](=O)[O-])c1,"aniline, 3-nitro-",0,pKaH2,2,False,0,charge_state_unreachable,unlimited
+perrin_supp4809,CC(CNCCNCC(C)Cc1ccccc1)Cc1ccccc1,"benzene, (isopropylphenyl) aminoethylaminoethylaminoisopropyl-",0,pKaH3,3,False,0,charge_state_unreachable,unlimited
+perrin_supp5068,CCOC(=O)c1cnc(C)c(C(=O)OCC)c1,"pyridine, 3,5-bis(ethoxycarbonyl)-2-methyl-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+perrin_supp5336,CC(=O)c1cccc[n+]1[O-],"pyridine 1-oxide, 2-acetyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp5337,CC(=O)c1cc[n+]([O-])cc1,"pyridine 1-oxide, 4-acetyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp5338,[O-][n+]1cccc(Br)c1,"pyridine 1-oxide, 3-bromo-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp5339,[O-][n+]1ccccc1Cl,"pyridine 1-oxide, 2-chloro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp5340,[O-][n+]1cccc(Cl)c1,"pyridine 1-oxide, 3-chloro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp5341,[O-][n+]1ccc(Cl)cc1,"pyridine 1-oxide, 4-chloro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp5343,[O-][n+]1cc(Br)cc(Br)c1,"pyridine 1-oxide, 3,5-dibromo-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp5344,[O-][n+]1c(Cl)cccc1Cl,"pyridine 1-oxide, 2,6-dichloro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp5345,[O-][n+]1cc(Cl)cc(Cl)c1,"pyridine 1-oxide, 3,5-dichloro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp5346,[O-][n+]1c(Cl)cccc1Cl,"pyridine 1-oxide, 2,6-dichloro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp5347,O=[N+]([O-])c1c(Cl)c[n+]([O-])cc1Cl,"pyridine 1-oxide, 3,5-dichloro-4-nitro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp5348,COc1cc(OC)c[n+]([O-])c1,"pyridine 1-oxide, 3,5-dimethoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp5349,COc1cc(OC)c([N+](=O)[O-])[n+]([O-])c1,"pyridine 1-oxide, 3,5-dimethoxy-2-nitro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp5350,Cc1cccc(C)[n+]1[O-],"pyridine 1-oxide, 2,6-dimethyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp5351,Cc1cc(C)c[n+]([O-])c1,"pyridine 1-oxide, 3,5-dimethyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp5352,Cc1cc([N+](=O)[O-])cc(C)[n+]1[O-],"pyridine 1-oxide, 2,6-dimethyl-4-nitro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp5353,Cc1c[n+]([O-])cc(C)c1[N+](=O)[O-],"pyridine 1-oxide, 3,5-dimethyl-4-nitro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp5354,O=[N+]([O-])c1cccc[n+]1[O-],"pyridine 1-oxide, 2-nitro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp5355,O=[N+]([O-])c1ccc[n+]([O-])c1,"pyridine 1-oxide, 3-nitro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp5356,O=[N+]([O-])c1cc[n+]([O-])cc1,"pyridine 1-oxide, 4-nitro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp5357,Cc1cc(C)[n+]([O-])c(C)c1,"pyridine 1-oxide, 2,4,6-trimethyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp6449,O=C(O)C1CSCCO1,"4-Thiamorpholine, 2-carboxy-",0,pKaH2,2,False,0,charge_state_unreachable,unlimited
+perrin_supp6603,Nc1cccc(-c2cc(=O)c3ccccc3o2)c1,"flavone, 3'-amino-",0,pKaH2,2,False,0,charge_state_unreachable,unlimited
+perrin_supp6604,Nc1ccc(-c2cc(=O)c3ccccc3o2)cc1,"flavone, 4'-amino-",0,pKaH2,2,False,0,charge_state_unreachable,unlimited
+perrin_supp6644,CCC1=C(C)OC(c2ccc(OC)c(OC)c2)c2cc(OC)c(OC)cc21,"1-(3,4-dimoxyphenyl)-4-ethyl-6,7-dimethoxy-3-methyl-isobenzpyrylium ion",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp6717,[O-][n+]1cccc2cccc(O)c21,"quinoline 1-oxide, 8-hydroxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7152,CN(C)c1nc2n(C)ccnc-2c(=O)n1,"pteridine, 2-dimethylamino-4,8-dihydro-8-methyl-4-oxo-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+perrin_supp7154,CN(C)c1nc2n(C)c(-c3ccccc3)c(-c3ccccc3)nc-2c(=O)n1,"pteridine, 2-dimethylamino-4,8-dihydro-8-methyl-4-oxo-6,7-diphenyl-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+perrin_supp7391,Nc1cccc(-c2cc(=O)c3c(ccc4ccccc43)o2)c1,"5,6-Benzoflavone, 3'-amino-",0,pKaH2,2,False,0,charge_state_unreachable,unlimited
+perrin_supp7392,Nc1ccc(-c2cc(=O)c3c(ccc4ccccc43)o2)cc1,"5,6-Benzoflavone, 4'-amino-",0,pKaH2,2,False,0,charge_state_unreachable,unlimited
+perrin_supp7427,[O-][n+]1c2ccccc2[n+]([O-])c2ccccc21,"phenazine, 5,10-dioxide-",0,pKaH2,2,False,0,charge_state_unreachable,unlimited
+perrin_supp7553,NCCOS(=O)(=O)[O-],2-Aminoethyl sulphate,-1,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7720,CSC(C)(C)[C@H](N)C(=O)O,"penicillamine, S-methyl-",0,pKaH2,2,False,0,charge_state_unreachable,unlimited
+perrin_supp7736,O=C(O)[C@H](CO)Nc1ccccc1,Phenylserine,0,pKaH2,2,False,0,charge_state_unreachable,unlimited
+perrin_supp7739,O=C(O)C1CCCCN1,Piperidine-2-carboxylic acid,0,pKaH2,2,False,0,charge_state_unreachable,unlimited
+perrin_supp7864,CC(C)=O,Acetone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7865,CC(=O)c1ccccc1,Acetophenone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7866,CC(=O)c1ccc(F)cc1,"acetophenone, p-fluoro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7867,CC(=O)c1ccc(C)cc1,"acetophenone, p-methyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7868,CC(=O)c1cccc2ccccc12,1-Acetylnaphthalene,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7869,CC(=O)c1ccc2ccccc2c1,2-Acetylnaphthalene,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7871,C=CC(=O)O,Acrylic acid,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7876,CCC(C)(C)O,"t-Amyl, alcohol-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7877,COc1ccc([N+](=O)[O-])cc1,"anisole, 4-nitro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7878,O=Cc1cccc2cc3ccccc3cc12,1-Anthraldehyde,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7879,O=Cc1c2ccccc2cc2ccccc12,9-Anthraldehyde,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7886,c1ccc2cccc-2cc1,Azulene,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7887,O=C(O)c1ccc2cccccc1-2,"azulene, 1-carboxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7888,Clc1ccc2cccccc1-2,"azulene, 1-chloro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7890,Clc1cc(Cl)c2cccccc1-2,"azulene, 1,3-dichloro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7892,O=Cc1ccc2cccccc1-2,"azulene, 1-formyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7893,Cc1ccc2cccccc1-2,"azulene, 1-methyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7894,O=[N+]([O-])c1ccc2cccccc1-2,"azulene, 1-nitro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7895,Cc1cc(C)c2cccc-2c(C)c1,"azulene, 4,6,8-trimethyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7896,Cc1cc(C)c2ccc([N+](=O)[O-])c-2c(C)c1,"azulene, 4,6,8-trimethyl-1-nitro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7897,O=Cc1ccccc1,Benzaldehyde,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7898,COc1ccc(C=O)cc1,"benzaldehyde, 4-methoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7899,Cc1ccc(C=O)cc1,"benzaldehyde, 4-methyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7900,COc1cc(OC)c(C=O)c(OC)c1,"benzaldehyde, 2,4,6-trimethoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7921,COc1cccc(OC)c1,"benzene, 1,3-dimethoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7922,Cc1c(C)c(C)c(C)c(C)c1C,"benzene, hexamethyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7923,CCOc1ccc(OCC)c(OCC)c1,"benzene, 1,3,4-triethoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7924,COc1cc(OC)cc(OC)c1,"benzene, 1,3,5-trimethoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7926,COc1ccc(C(O)c2ccc(OC)cc2)cc1,"benzhydrol, 4,4'-dimethoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7927,O=c1ccoc2ccc3ccccc3c12,"5,6-Benzochromone",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7928,O=c1ccoc2c1ccc1ccccc12,"7,8-Benzochromone",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7934,O=C(O)c1ccccc1,Benzoic acid,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7936,O=C(c1ccccc1)c1ccccc1,Benzophenone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7937,COc1ccc(C(=O)c2ccc(OC)cc2)cc1,"benzophenone, 4,4'-dimethoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7938,O=C1C=Cc2cc3cccc4ccc5ccc1c2c5c43,"3H-Benzo[c,d]pyren-3-one",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7939,O=C1C=C(O)c2cc3cccc4ccc5ccc1c2c5c43,"3H-Benzo[c,d]pyren-3-one, 5-hydroxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7940,CC1=CC(=O)c2ccc3ccc4cccc5cc1c2c3c45,"3H-Benzo[c,d]pyren-3-one, 5-methyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7941,O=C1C=Cc2ccc3ccc4cccc5cc1c2c3c45,"5H-Benzo[c,d]pyren-5-one",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7955,O=C(Cc1ccccc1)c1ccccc1,Benzyl phenyl ketone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7956,CCCCO,n-Butanol,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7957,CCC(C)O,sec-Butanol,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7958,CC(C)(C)O,t-Butanol,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7960,C=C(C)[C@H]1CC=C(C)C(=O)C1,d-Carvone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7961,O=C(/C=C/c1ccccc1)c1ccccc1,Chalcone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7962,O=c1ccoc2ccccc12,Chromone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7963,CC(C)c1cc(=O)c2ccccc2o1,"chromone, 2-isopropyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7964,COc1ccc2c(=O)ccoc2c1,"chromone, 7-methoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7965,Cc1cc(=O)c2ccccc2o1,"chromone, 2-methyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7966,Cc1ccc2c(=O)ccoc2c1,"chromone, 7-methyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7967,O=c1ccc2ccccc2o1,Coumarin,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7968,C/C=C/C=O,Crotonaldehyde,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7969,C/C=C/C(=O)O,Crotonic acid,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7970,OC1CCCCC1,Cyclohexanol,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7971,O=C1C=CCCC1,2-Cyclohexen-1-one,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7972,CC1=CC(=O)CC(C)C1,"2-Cyclohexen-1-one, 3,5-dimethyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7973,CCOC1=CC(=O)CCC1,"2-Cyclohexen-1-one, 3-ethoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7974,O=C1C=C(O)CCC1,"2-Cyclohexen-1-one, 3-hydroxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7975,CC1=CC(=O)CCC1,"2-Cyclohexen-1-one, 3-methyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7977,O=C1C=CCC1,2-Cyclopenten-1-one,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7978,CC1=C(C)C(=O)CC1,"2-Cyclopenten-1-one, 2,3-dimethyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7979,CC1=C(O)C(=O)CC1,"2-Cyclopenten-1-one, 2-hydroxy-3-methyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7980,CC1=CC(=O)CC1,"2-Cyclopenten-1-one, 3-methyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7981,O=c1c(-c2ccccc2)c1-c1ccccc1,"cyclopropenone, diphenyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7982,CCCc1c(CCC)c1=O,"cyclopropenone, dipropyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7983,CC(=O)C1CC1,Cyclopropyl methyl ketone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7987,O=S(Cc1ccccc1)Cc1ccccc1,Dibenzylsulphoxide,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7988,CCCCS(=O)CCCC,Dibutyl sulphoxide,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7989,CCOCC,Diethyl ether,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7990,COc1cc(-c2ccc3ccc(O)cc3[o+]2)ccc1O.[Cl-],"4',7-Dihydroxy-3'-methoxyflavylium chloride",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7994,CP(C)(=S)S,Dimethyldithiophosphinic acid,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7994,CP(C)(=S)S,Dimethyldithiophosphinic acid,0,pKaH2,2,False,0,charge_state_unreachable,unlimited
+perrin_supp7996,COP(C)(=O)OC,Dimethyl methylphosphonate,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7997,CP(C)(=O)c1ccccc1,Dimethylphenylphosphine oxide,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7998,CP(C)(=S)c1ccccc1,Dimethylphenylphosphine sulphide,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp7999,CP(C)(=O)O,Dimethylphosphinic acid,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8000,CS(C)=O,Dimethyl sulphoxide,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8001,CC1CCC2=CC(=O)CCC2(C)C1=O,"2,8a-Dimethyl-3,4,8,8a-tetrahydro-1,6(2H,7H)-naphthalene-dione",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8008,O=c1c(-c2ccccc2)c1-c1ccccc1,Diphenylcyclopropenone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8009,CP(=O)(c1ccccc1)c1ccccc1,Diphenylmethylphosphine oxide,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8010,CP(=S)(c1ccccc1)c1ccccc1,Diphenylmethylphosphine sulphide,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8011,O=[Se](c1ccccc1)c1ccccc1,Diphenyl selenoxide,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8012,O=S(c1ccccc1)c1ccccc1,Diphenylsulphoxide,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8016,CCO,Ethanol,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8017,CCOC(C)=O,Ethyl acetate,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8018,CC1=CC=CC(C)(C)CC1=O,Eucarvone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8019,O=c1cc(-c2ccccc2)oc2ccccc12,Flavone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8020,O=C1c2ccccc2-c2ccccc21,Fluorenone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8021,O=C1C=CC=CC2CC12,Homotropone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8022,O=c1c(-c2ccccc2)coc2ccccc12,Isoflavone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8023,CC(C)O,Isopropanol,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8026,CC(=O)C=C(C)C,Mesityl oxide,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8027,CO,Methanol,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8028,COC(C)=O,Methyl acetate,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8029,COC(=O)c1ccccc1,Methyl benzoate,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8029,COC(=O)c1ccccc1,Methyl benzoate,0,pKaH2,2,False,0,charge_state_unreachable,unlimited
+perrin_supp8031,CC(=O)c1cccc2ccccc12,Methyl 1-naphthyl ketone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8032,CC(=O)c1ccc2ccccc2c1,Methyl 2-naphthyl ketone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8036,CC=C(C)C(C)=O,3-Methyl-3-penten-2-one-,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8037,O=Cc1cccc2ccccc12,1-Naphthaldehyde,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8038,O=Cc1ccc2ccccc2c1,2-Naphthaldehyde,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8040,O=C(O)c1cccc2ccccc12,1-Naphthoic acid,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8041,O=C(O)c1ccc2ccccc2c1,2-Naphthoic acid,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8042,O=c1ccsc2ccc3ccccc3c12,"1H-Naphtho[2,1-b]thiopyran-1-one",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8043,O=c1ccsc2c1ccc1ccccc12,"4H-Naphtho[1,2-b]thiopyran-4-one",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8044,O=[N+]([O-])c1ccccc1,Nitrobenzene,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8045,O=[N+]([O-])c1ccc(Cl)cc1,"Nitrobenzene, 4-chloro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8046,O=C1C=Cc2cccc3cccc1c23,Perinaphthenone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8047,O=Cc1cc2ccccc2c2ccccc12,9-Phenanthraldehyde,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8048,CCOc1cc(O)cc(OCC)c1,"phenol, 3,5-diethoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8053,CS(=O)c1ccccc1,Phenyl methyl sulphoxide,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8055,Oc1cc(O)cc(O)c1,Phloroglucinol,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8056,COc1ccc(C2(O)OC(C)(C)c3ccccc32)cc1,"phthalan, 1-p-anisyl-1-hydroxy-3,3-dimethyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8065,O=C1OCc2ccccc21,Phthalide,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8067,CCC(=O)O,Propionic acid,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8068,CCCOC(C)=O,n-propyl acetate,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8069,Cc1cc(C)oc(=O)c1,"2-Pyrone, 4,6-dimethyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8070,O=c1ccocc1,4-Pyrone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8071,Cc1cc(=O)cc(C)o1,"4-Pyrone, 2,6-dimethyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8072,O=c1cc(-c2ccccc2)oc(-c2ccccc2)c1,"4-Pyrone, 2,6-diphenyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8074,Cc1cc(=O)cc(-c2ccccc2)o1,"4-Pyrone, 2-methyl-6-phenyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8075,O=c1ccoc(-c2ccccc2)c1,"4-Pyrone, 2-phenyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8080,O=c1ccsc2ccccc12,1-Thiachromone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8081,Cc1cc(=O)c2ccccc2s1,"1-Thiachromone, 2-methyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8082,O=c1cc(-c2ccccc2)sc2ccccc12,"1-Thiachromone, 2-phenyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8083,O=c1c(-c2ccccc2)csc2ccccc12,"1-Thiachromone, 3-phenyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8084,O=c1ccc2ccccc2s1,Thiacoumarin,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8088,O=c1c2c(oc3ccccc13)C=CCS2,Thiaxanth-9-one,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8093,Cc1ccc([N+](=O)[O-])cc1[N+](=O)[O-],"toluene, 2,4-dinitro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8094,Cc1ccc([N+](=O)[O-])cc1,"toluene, 4-nitro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8095,O=[As](c1ccccc1)(c1ccccc1)c1ccccc1,Triphenylarsine oxide,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8096,OC(c1ccccc1)(c1ccccc1)c1ccccc1,Triphenylcarbinol,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8097,COc1ccc(C(O)(c2ccccc2)c2ccc(OC)cc2)cc1,"triphenylcarbinol, 4,4'-dimethoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8098,COc1ccc(C(O)(c2ccccc2)c2ccccc2)cc1,"triphenylcarbinol, 4-methoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8099,Cc1ccc(C(O)(c2ccccc2)c2ccccc2)cc1,"triphenylcarbinol, 4-methyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8100,O=[N+]([O-])c1ccc(C(O)(c2ccccc2)c2ccccc2)cc1,"triphenylcarbinol, 4-nitro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8101,OC(c1cccc(Cl)c1)(c1cccc(Cl)c1)c1cccc(Cl)c1,"triphenylcarbinol, 3,3',3""-trichloro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8102,OC(c1ccc(Cl)cc1)(c1ccc(Cl)cc1)c1ccc(Cl)cc1,"triphenylcarbinol, 4,4',4""-trichloro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8103,COc1ccc(C(O)(c2ccc(OC)cc2)c2ccc(OC)cc2)cc1,"triphenylcarbinol, 4,4',4""-trimethoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8104,O=[N+]([O-])c1ccc(C(O)(c2ccc([N+](=O)[O-])cc2)c2ccc([N+](=O)[O-])cc2)cc1,"triphenylcarbinol, 4,4',4""-trinitro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8105,O=[N+]([O-])c1ccc(C(Cl)(c2ccccc2)c2ccc([N+](=O)[O-])cc2)cc1,"triphenylchloromethane, 4,4'-dinitro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8106,O=P(c1ccccc1)(c1ccccc1)c1ccccc1,Triphenyl phosphine oxide,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8107,O=c1cccccc1O,Tropolone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8108,O=c1cccccc1,Tropone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8110,O=c1c2ccccc2oc2ccccc12,Xanthone,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8111,OC1c2ccccc2Oc2ccccc21,Xanthydrol,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8118,Cc1cc(C2(c3ccc(O)c(C)c3)OS(=O)(=O)c3ccccc32)ccc1O,o-Cresol Red,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8119,Cc1cc(O)ccc1C1(c2ccc(O)cc2C)OS(=O)(=O)c2ccccc21,m-Cresol Purple,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8138,Cc1cc(O)c(C(C)C)cc1C1(c2cc(C(C)C)c(O)cc2C)OS(=O)(=O)c2ccccc21,Thymol Blue,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8265,CC[As](=O)(CC)c1ccccc1,Phenyldiethylarsine oxide,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8266,CC[As](=O)(CC)c1ccc(Br)cc1,"phenyldiethylarsine oxide, p-bromo-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8267,CC[As](=O)(CC)c1ccc(Cl)cc1,"phenyldiethylarsine oxide, p-chloro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8269,CC[As](=O)(CC)c1ccccc1OC,"phenyldiethylarsine oxide, o-methoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8270,CC[As](=O)(CC)c1ccc(OC)cc1,"phenyldiethylarsine oxide, p-methoxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8271,CC[As](=O)(CC)c1ccc(C)cc1,"phenyldiethylarsine oxide, p-methyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8272,CC[As](=O)(CC)c1ccccc1[N+](=O)[O-],"phenyldiethylarsine oxide, o-nitro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8273,CC[As](=O)(CC)c1cccc([N+](=O)[O-])c1,"phenyldiethylarsine oxide, m-nitro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8274,CC[As](=O)(CC)c1ccc([N+](=O)[O-])cc1,"phenyldiethylarsine oxide, p-nitro-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8275,CCC[As](=O)(CCC)c1ccccc1,Phenyldi-n-propylarsine oxide,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8276,CCC[As](=O)(CCC)c1ccc(C)cc1,"phenyldi-n-propylarsine oxide, p-methyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+perrin_supp8290,O=[As](c1ccccc1)(c1ccccc1)c1ccccc1,Triphenylarsine oxide,0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+serjeant2001,C=O,Methanal,0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant2052,O=CC(Cl)(Cl)Cl,"ethanal, trichloro-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant2053,O=CC(F)(F)F,"ethanal, trifluoro-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant2156,O=C(C(F)(F)F)C(F)(F)F,"propanone, 1,1,1,3,3,3-hexafluoro-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant2222,O=S1(=O)CCS(=O)(=O)C1,"1,3-Dithiacyclopentane, 1,1,3,3-tetraoxide-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant2251,CS(=O)(=O)CS(C)(=O)=O,"2,4-Dithiapentane-2,2,4,4-tetraoxide",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant2267,O=C(C(F)(F)Cl)C(F)(F)Cl,"propanone, 1,3-dichloro-1,1,3,3-tetrafluoro-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant2268,O=C(C(F)(F)Cl)C(F)(Cl)Cl,"propanone, 1,1,3-trichloro-1,3,3-trifluoro-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant2269,O=C(C(F)(Cl)Cl)C(F)(Cl)Cl,"propanone, 1,1,3,3-tetrachloro-1,3-difluoro-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant2443,O=S1(=O)CCCS(=O)(=O)C1,"1,3-Dithiacyclohexane-1,1,3,3-tetraoxide",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant2454,C[S+](C)CC(=O)O,"acetic acid, dimethylsulfonio-",1,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant2532,C1=CCC=C1,Cyclopentadiene,0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant2538,O=c1ccocc1O,"4H-Pyran-4-one, 3-hydroxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+serjeant2720,O=S1(=O)CCCCS(=O)(=O)C1,"1,3-Dithiacycloheptane-1,1,3,3-tetroxide",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant2729,C[S+](C)CCC(=O)O,"propanoic acid, 3-dimethylsulfonio-",1,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant2741,C[N+](C)(C)CC([N+](=O)[O-])[N+](=O)[O-],"N,N,N-Trimethyl-N-(2,2-dinitroethyl)ammonium cation",1,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant2806,CCN(CC)CP(=O)(O)O,"methylphosphonic acid, diethylamino-",0,pKa6,-6,False,0,charge_state_unreachable,unlimited
+serjeant2806,CCN(CC)CP(=O)(O)O,"methylphosphonic acid, diethylamino-",0,pKa5,-5,False,0,charge_state_unreachable,unlimited
+serjeant2824,c1ccc2[nH]nnc2c1,1H-Benzotriazole,0,pKa2,-2,False,0,charge_state_unreachable,unlimited
+serjeant2835,Cc1occc(=O)c1O,"4H-Pyran-4-one, 3-hydroxy-2-methyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+serjeant2873b,C(\C=C\CCC)(=O)O,2-Hexenoic acid,0,pKa2,-2,False,0,charge_state_unreachable,unlimited
+serjeant2912,O=C1C(O)=C(Cl)C(=O)C(Cl)=C1Cl,"1,4-Benzoquinone, 3,5,6-trichloro-2-hydroxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+serjeant2924,O=c1ncc2nccnc2[nH]1,Pteridin-2(1H)-one,0,pKa3,-3,False,0,charge_state_unreachable,unlimited
+serjeant2925,O=c1cnc2ncncc2[nH]1,Pteridin-6(5H)-one,0,pKa3,-3,False,0,charge_state_unreachable,unlimited
+serjeant2968,O=Cc1ccccn1,2-Pyridinecarbaldehyde,0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant2969,O=Cc1cccnc1,3-Pyridinecarbaldehyde,0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant2970,O=Cc1ccncc1,4-Pyridinecarbaldehyde,0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant3008,O=c1cc(CCl)occ1O,"4H-Pyran-4-one, 6-chloromethyl-3-hydroxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+serjeant3009,O=c1cc(CI)occ1O,"4H-Pyran-4-one, 3-hydroxy-6-iodomethyl-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+serjeant3219,O=S1(=O)CCCCCS(=O)(=O)C1,"1,3-Dithiacyclooctane, 1,1,3,3-tetroxide-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant3321,Nc1ccc([N+](=O)[O-])cc1S(=O)(=O)O,"benzenesulfonic acid, 2-amino-5-nitro-",0,pKa3,-3,False,0,charge_state_unreachable,unlimited
+serjeant3322,Nc1ccc(S(=O)(=O)O)cc1[N+](=O)[O-],"benzenesulfonic acid, 4-amino-3-nitro-",0,pKa3,-3,False,0,charge_state_unreachable,unlimited
+serjeant3382,N#CC1=C(C#N)CC=C1,"1,3-Cyclopentadiene-1,2-dicarbonitrile",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant3383,N#CC1=CCC(C#N)=C1,"1,3-Cyclopentadiene-1,3-dicarbonitrile",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant3384,O=Cc1ccccc1,Benzaldehyde,0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant3389,O=c1cccccc1O,"1,4,6-Cycloheptatrien-1-one, 2-hydroxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+serjeant3524,O=Cc1cccc(Cl)c1,"benzaldehyde, 3-chloro-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant3525,O=Cc1ccc(Cl)cc1,"benzaldehyde, 4-chloro-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant3553,O=Cc1cccc([N+](=O)[O-])c1,"benzaldehyde, 3-nitro-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant3554,O=Cc1ccc([N+](=O)[O-])cc1,"benzaldehyde, 4-nitro-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant3564,O=C1OI(O)c2ccccc21,"1,2-Benziodoxol-3(1H)-one, 1-hydroxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+serjeant3564,O=C1OI(O)c2ccccc21,"1,2-Benziodoxol-3(1H)-one, 1-hydroxy-",0,pKaH2,2,False,0,charge_state_unreachable,unlimited
+serjeant3891,[Cl-].c1cc2ccsc2c[nH+]1,"Thieno[2,3-c]pyridinium chloride",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant3907,C[n+]1ccccc1C=O.[I-],"1-Methylpyridinium iodide, 2-formyl-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant3908,C[n+]1ccc(C=O)cc1.[I-],"1-Methylpyridinium iodide, 4-formyl-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant3930,O=C(O)CN(CC(=O)O)c1nccs1,"3-Azapentanedioic acid, 3-(2-thiazolyl)-",0,pKa4,-4,False,0,charge_state_unreachable,unlimited
+serjeant3960,O=Cc1ccccc1C=O,"1,2-Benzenedicarbaldehyde",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant3974,Cc1cccc(C=O)c1,"benzaldehyde, 3-methyl-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant3980,COc1cccc(C=O)c1,"benzaldehyde, 3-methoxy-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant3981,COc1ccc(C=O)cc1,"benzaldehyde, 4-methoxy-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant3990,CC(=O)c1cccc(O)c1O,"acetophenone, 2,3-dihydroxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+serjeant3991,CC(=O)c1ccc(O)cc1O,"acetophenone, 2,4-dihydroxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+serjeant3993,CC(=O)c1c(O)cccc1O,"acetophenone, 2,6-dihydroxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+serjeant4264,Cc1ccc2c(c1)S(=O)(=O)CS2(=O)=O,"1,3-Dithiaindan, 1,1,3,3-tetroxide, 6-methyl-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant4342,CP(C)c1cccc(O)c1,"phenol, 3-dimethylphosphino-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+serjeant4343,CP(C)c1ccc(O)cc1,"phenol, 4-dimethylphosphino-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+serjeant4405,O=C(c1cccc(Br)c1)C(F)(F)F,"acetophenone, 3-bromo-α,α,α-trifluoro-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant4406,O=C(c1cccc([N+](=O)[O-])c1)C(F)(F)F,"acetophenone, α,α,α-trifluoro-3-nitro-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant4452,Cc1[nH+]ccc2sccc12.[Cl-],"thieno[3,2-c]pyridinium chloride, 4-methyl-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant4453,Cc1[nH+]ccc2ccsc12.[Cl-],"thieno[2,3-c]pyridinium chloride, 7-methyl-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant4497,CC(C)(C=O)C[N+](C)(C)C.[I-],"N,N,N-Trimethyl, 2-formyl-2-methylpropylammonium iodide (Propanal, 2,2-dimethyl-3-(N,N,N-trimethylammonio-), iodide)-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant4671,COc1ccc(C(=O)C(F)(F)F)cc1,"acetophenone, α,α,α-trifluoro-4-methoxy-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant4773,Cc1nc2cnc(=S)nc-2n(C)c1C,"pteridine-2(8H)-thione, 6,7,8-trimethyl-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant4782,C[S+](C)c1cccc(C(=O)O)c1,"benzoic acid, 3-dimethylsulfonio-",1,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant4783,C[S+](C)c1ccc(C(=O)O)cc1,"benzoic acid, 4-dimethylsulfonio-",1,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant4833a,C[N+](C)(C)c1ccccc1O,"phenol, 2-trimethylammonio-",1,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant4843,O=C(O)CCP(CCC(=O)O)CCC(=O)O,"3,3',3""-Phosphinidynetripropanoic acid",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+serjeant4860,O=C(O)c1nc2ccccc2nc1Cl,"2-Quinoxalinecarboxylic acid, 3-chloro-",0,pKa3,-3,False,0,charge_state_unreachable,unlimited
+serjeant4873,O=S(=O)(O)c1ccc2cccnc2c1O,"7-Quinolinesulfonic acid, 8-hydroxy-",0,pKa3,-3,False,0,charge_state_unreachable,unlimited
+serjeant4883,Cc1cc2c(C)[nH+]ccc2s1.[Cl-],"thieno[3,2-c]pyridinium chloride, 2,4-dimethyl-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant4884,Cc1cc2sccc2c(C)[nH+]1.[Cl-],"thieno[3,2-c]pyridinium chloride, 4,6-dimethyl-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant4904,C[N+](C)(C)c1ccc(O)c(Cl)c1,"phenol, 2-chloro-4-trimethylammonio-",1,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant4946,O=S(=O)(O)c1cc(I)c2cccnc2c1O,"7-Quinolinesulfonic acid, 8-hydroxy-5-iodo-",0,pKa3,-3,False,0,charge_state_unreachable,unlimited
+serjeant4953,O=C1C=C(O)C(=O)c2ccccc21,"1,4-Naphthoquinone, 2-hydroxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+serjeant5079,O=C(O)c1nccc2ccccc12,1-Isoquinolinecarboxylic acid,0,pKa2,-2,False,0,charge_state_unreachable,unlimited
+serjeant5170,COC(=O)[C-](C(=O)OC)[n+]1ccccc1,Bis(methoxycarbonyl)pyridiniomethanide,0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant5251,CC[N+]1(CC)CCCCC1C(=O)O,"2-Piperidinecarboxylic acid, N,N-diethyl-",1,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant5289,Cc1cc2sc(C)cc2c(C)[nH+]1.[Cl-],"thieno[3,2-c]pyridinium chloride, 2,4,6-trimethyl-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant5656,CCOC(=O)[C-](C(=O)OCC)[n+]1ccccc1,Bis(ethoxycarbonyl)pyridiniomethanide,0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant5782,O=C1C=C(O)c2cccc3cccc1c23,"1-Phenalenone, 3-hydroxy-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+serjeant5803,CCC(CC)(C(=O)O)C(CC)(CC)C(=O)OC,"pentanoic acid, 2,2,3-triethyl-3-methoxycarbonyl-",0,pKa2,-2,False,0,charge_state_unreachable,unlimited
+serjeant5981,COC(=O)[C-](C(=O)OC)c1[nH+]ccc2ccccc12,Bis(methoxycarbonyl)isoquinoliniomethanide,0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant6046,CC(=O)N(c1cc(C)ccc1C)[NH+]1CC[NH2+]CC1.[Cl-].[Cl-],"piperazinediium dichloride, 1-(N-acetyl-2,5-dimethylanilino)-",0,pKa2,-2,False,0,charge_state_unreachable,unlimited
+serjeant6047,CC(=O)N(c1c(C)cccc1C)[NH+]1CC[NH2+]CC1.[Cl-].[Cl-],"piperazinediium dichloride, 1-(N-acetyl-2,6-dimethylanilino)-",0,pKa2,-2,False,0,charge_state_unreachable,unlimited
+serjeant6089,Cc1ccc(OS(=O)(=O)CS(=O)(=O)Oc2ccc(C)cc2)cc1,"bis(p-tolyl), methanedisulfonate-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant6110,C(=Cc1[nH+]ccc2ccsc12)c1ccccc1.[Cl-],"thieno[2,3-c]pyridinium chloride, 7-styryl-",0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant6113,CC(=O)N(c1c(C)cccc1C)[NH+]1CC[NH+](C)CC1.[Cl-].[Cl-],"piperazinediium dichloride, 1-(N-acetyl-2,6-dimethylanilino)-4-methyl-",0,pKa2,-2,False,0,charge_state_unreachable,unlimited
+serjeant6152,CCOC(=O)[C-](C(=O)OCC)c1[nH+]ccc2ccccc12,Bis(ethoxycarbonyl)isoquinoliniomethanide,0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant6153,CCOC(=O)[C-](C(=O)OCC)[n+]1cccc2ccccc21,Bis(ethoxycarbonyl)quinoliniomethanide,0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant6256,CC(C)(C)c1cc([N+](C)(C)C)cc(C(C)(C)C)c1O,"phenol, 2,6-di-tert-butyl-4-trimethylammonio-",1,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant6305,C[N+](C)(C)c1ccc(C2C(=O)c3ccccc3C2=O)cc1,"1,3-Indandione, 2-(p-trimethylammoniophenyl)-",1,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant6330,O=S(=O)(O)c1cccc(P(c2ccccc2)c2ccccc2)c1,"benzenesulfonic acid, 3-diphenylphosphino-",0,pKa2,-2,False,0,charge_state_unreachable,unlimited
+serjeant6344,O=c1cc2oc3cc(O)c(O)cc3c(-c3ccccc3O)c-2cc1O,"3H-Xanthen-3-one, 2,6,7-trihydroxy-9-(2-hydroxyphenyl)-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+serjeant6345,O=C1C=CC(=C(c2ccc(O)cc2)c2ccc(O)cc2)C=C1,"2,5-Cyclohexadien-1-one, 4-[bis(p-hydroxyphenyl)]methylene-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+serjeant6356,O=c1cc2oc3cc(O)c(O)cc3c(-c3ccc([N+](=O)[O-])cc3)c-2cc1O,"3H-Xanthen-3-one, 2,6,7-trihydroxy-9-(4-nitrophenyl)-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+serjeant6403,Cc1cc(C2(c3ccc(O)c(C)c3)OS(=O)(=O)c3ccccc32)ccc1O,"4,4'-(3H-2,1-Benzoxathiol-3-ylidene)bis(2-methylphenol), S,S,dioxide-",0,pKaH1,1,False,0,charge_state_unreachable,unlimited
+serjeant6445,CC1=CC(=C(c2cc(C)c(O)c(C(=O)O)c2)c2c(Cl)ccc(Cl)c2Cl)C=C(C(=O)O)C1=O,"1,4-Cyclohexadiene-1-carboxylic acid, 3-[(3-carboxy-4-hydroxy-5-methylphenyl)(2,3,6-trichlorophenyl)methylene]-5-methyl-6-oxo-",0,pKa4,-4,False,0,charge_state_unreachable,unlimited
+serjeant6450,COC(=O)[C-](C(=O)OC)[P+](c1ccccc1)(c1ccccc1)c1ccccc1,Bis(methoxycarbonyl)(triphenylphosphinio)methanide,0,pKa1,-1,False,0,charge_state_unreachable,unlimited
+serjeant6505,Cc1c(C2(c3cc(C(C)C)c(O)c(CN(CC(=O)[O-])CC(=O)[O-])c3C)OS(=O)(=O)c3ccccc32)cc(C(C)C)c(O)c1CN(CC(=O)[O-])CC(=O)[O-].[Na+].[Na+].[Na+].[Na+],"3H-2,1-Benzoxathiol-3-ylidenebis[(6-hydroxy-5-isopropyl-2-methyl-m-phenylene)methylenenitrilo]tetraacetic acid, S,S-dioxide-",0,pKaH3,3,False,0,charge_state_unreachable,unlimited
+serjeant6505,Cc1c(C2(c3cc(C(C)C)c(O)c(CN(CC(=O)[O-])CC(=O)[O-])c3C)OS(=O)(=O)c3ccccc32)cc(C(C)C)c(O)c1CN(CC(=O)[O-])CC(=O)[O-].[Na+].[Na+].[Na+].[Na+],"3H-2,1-Benzoxathiol-3-ylidenebis[(6-hydroxy-5-isopropyl-2-methyl-m-phenylene)methylenenitrilo]tetraacetic acid, S,S-dioxide-",0,pKaH4,4,False,0,charge_state_unreachable,unlimited
