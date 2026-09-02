@@ -18,9 +18,9 @@ EXPERIMENTS_ROOT = Path(__file__).resolve().parents[1]
 PEACE_ROOT = EXPERIMENTS_ROOT.parent / "PEACE"
 
 DEFAULT_SCREEN_THRESHOLD = "80.0"
-DEFAULT_MAX_CONFORMERS = "10"
+DEFAULT_MAX_CONFORMERS = "20"
 DEFAULT_CONFORMER_ENERGY_THRESHOLD = "40.0"
-
+DEFAULT_EMBEDDED_CONFORMERS = "500"
 
 def slugify(value: str) -> str:
     value = value.strip().lower()
@@ -196,6 +196,8 @@ def build_peace_command(
         DEFAULT_MAX_CONFORMERS,
         "--conformer-energy-threshold",
         DEFAULT_CONFORMER_ENERGY_THRESHOLD,
+        "--embedded-conformers",
+        DEFAULT_EMBEDDED_CONFORMERS,
     ]
     if temperature is not None:
         cmd.extend(["--temperature", str(temperature)])

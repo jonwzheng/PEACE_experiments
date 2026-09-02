@@ -285,6 +285,17 @@ def _smiles_match_keys(smiles: str) -> tuple[str | None, str | None]:
     )
 
 
+def _strip_stereochemistry(smiles: str) -> str | None:
+    """Canonical SMILES with tetrahedral and double-bond stereo removed."""
+    mol = Chem.MolFromSmiles(str(smiles))
+    if mol is None:
+        return None
+    for atom in mol.GetAtoms():
+        atom.SetAtomMapNum(0)
+    Chem.RemoveStereochemistry(mol)
+    return Chem.MolToSmiles(mol, isomericSmiles=False)
+
+
 def _lookup_protomer_energy(
     peace: pd.DataFrame,
     *,
@@ -500,6 +511,7 @@ def main() -> None:
         reaction_index = int(row["reaction_index"])
         reactant = str(row["reactant_smiles"])
         product = str(row["product_smiles"])
+        product_tautomer = _strip_stereochemistry(product) or product
         solvent = str(row["solvent"])
         temperature = float(row["temperature"])
         tabulated = pd.to_numeric(row["tabulated_constant"], errors="coerce")
@@ -567,7 +579,7 @@ def main() -> None:
                 charge_max=charge,
                 site_search_mode=site_search_mode,
                 only_protomer_search=only_protomer_search,
-                add_tautomers=[product] if add_product_tautomer else None,
+                add_tautomers=[product_tautomer] if add_product_tautomer else None,
                 extra_args=main_extra_args,
             )
             outcome = run_peace_job(
@@ -584,7 +596,7 @@ def main() -> None:
         score = score_peace_results(
             output_csv=output_csv,
             reactant_smiles=reactant,
-            product_smiles=product,
+            product_smiles=product_tautomer,
             temperature=temperature,
             tabulated_constant=float(tabulated) if pd.notna(tabulated) else float("nan"),
         )
