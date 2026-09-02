@@ -80,7 +80,9 @@ def _build_parser() -> argparse.ArgumentParser:
         description=(
             "Benchmark PEACE tautomer free-energy ratios against Gimadiev extracted "
             "equilibria (data/reactions_extracted_processed.csv). Runs peace.main "
-            "with --solvation, --solvent, and --temperature from each row."
+            "with --solvation on the reactant, --add-tautomers for the product, "
+            "--only-protomer-search, and --site-search-mode none so only those two "
+            "structures are scored."
         )
     )
     parser.add_argument(
@@ -511,12 +513,11 @@ def main() -> None:
         if user_set_site_search:
             site_search_mode = None
             site_search_label = "user"
-        elif reactant_zwit or product_zwit:
-            site_search_mode = None
-            site_search_label = "default"
         else:
             site_search_mode = "none"
             site_search_label = "none"
+        only_protomer_search = "--only-protomer-search" not in main_extra_args
+        add_product_tautomer = "--add-tautomers" not in main_extra_args
 
         mol_dir = _entry_dir(
             results_root,
@@ -537,7 +538,7 @@ def main() -> None:
         print(
             f"[{row_number + 1}/{len(data)}] rxn {reaction_index}: "
             f"{solvent} T={temperature:g} K site-search={site_search_label} "
-            f"seed={reactant}"
+            f"only-protomer-search={only_protomer_search} seed={reactant}"
         )
 
         run_ok = False
@@ -565,11 +566,8 @@ def main() -> None:
                 charge_min=charge,
                 charge_max=charge,
                 site_search_mode=site_search_mode,
-                keep_tautomer_smiles=(
-                    None
-                    if "--keep-tautomer-smiles" in main_extra_args
-                    else [reactant, product]
-                ),
+                only_protomer_search=only_protomer_search,
+                add_tautomers=[product] if add_product_tautomer else None,
                 extra_args=main_extra_args,
             )
             outcome = run_peace_job(

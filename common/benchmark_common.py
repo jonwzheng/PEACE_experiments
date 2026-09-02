@@ -171,7 +171,8 @@ def build_peace_command(
     charge_min: int | None = None,
     charge_max: int | None = None,
     site_search_mode: str | None = None,
-    keep_tautomer_smiles: list[str] | None = None,
+    add_tautomers: list[str] | None = None,
+    only_protomer_search: bool = False,
     extra_args: list[str] | None = None,
 ) -> list[str]:
     cmd = [
@@ -204,9 +205,11 @@ def build_peace_command(
         cmd.extend(["--charge-max", str(charge_max)])
     if site_search_mode is not None:
         cmd.extend(["--site-search-mode", str(site_search_mode)])
-    if keep_tautomer_smiles:
-        for tautomer_smiles in keep_tautomer_smiles:
-            cmd.extend(["--keep-tautomer-smiles", tautomer_smiles])
+    if only_protomer_search:
+        cmd.append("--only-protomer-search")
+    if add_tautomers:
+        for tautomer_smiles in add_tautomers:
+            cmd.extend(["--add-tautomers", tautomer_smiles])
     if extra_args:
         cmd.extend(extra_args)
     return cmd
