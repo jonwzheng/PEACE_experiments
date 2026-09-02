@@ -565,6 +565,11 @@ def main() -> None:
                 charge_min=charge,
                 charge_max=charge,
                 site_search_mode=site_search_mode,
+                keep_tautomer_smiles=(
+                    None
+                    if "--keep-tautomer-smiles" in main_extra_args
+                    else [reactant, product]
+                ),
                 extra_args=main_extra_args,
             )
             outcome = run_peace_job(

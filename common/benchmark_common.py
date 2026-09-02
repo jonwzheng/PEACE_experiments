@@ -19,6 +19,7 @@ PEACE_ROOT = EXPERIMENTS_ROOT.parent / "PEACE"
 
 DEFAULT_SCREEN_THRESHOLD = "80.0"
 DEFAULT_MAX_CONFORMERS = "10"
+DEFAULT_CONFORMER_ENERGY_THRESHOLD = "40.0"
 
 
 def slugify(value: str) -> str:
@@ -170,6 +171,7 @@ def build_peace_command(
     charge_min: int | None = None,
     charge_max: int | None = None,
     site_search_mode: str | None = None,
+    keep_tautomer_smiles: list[str] | None = None,
     extra_args: list[str] | None = None,
 ) -> list[str]:
     cmd = [
@@ -191,6 +193,8 @@ def build_peace_command(
         DEFAULT_SCREEN_THRESHOLD,
         "--max-conformers",
         DEFAULT_MAX_CONFORMERS,
+        "--conformer-energy-threshold",
+        DEFAULT_CONFORMER_ENERGY_THRESHOLD,
     ]
     if temperature is not None:
         cmd.extend(["--temperature", str(temperature)])
@@ -200,6 +204,9 @@ def build_peace_command(
         cmd.extend(["--charge-max", str(charge_max)])
     if site_search_mode is not None:
         cmd.extend(["--site-search-mode", str(site_search_mode)])
+    if keep_tautomer_smiles:
+        for tautomer_smiles in keep_tautomer_smiles:
+            cmd.extend(["--keep-tautomer-smiles", tautomer_smiles])
     if extra_args:
         cmd.extend(extra_args)
     return cmd
