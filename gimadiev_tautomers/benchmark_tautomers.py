@@ -65,6 +65,9 @@ SUMMARY_COLUMNS = [
     "matched_reactant_smiles",
     "matched_product_smiles",
     "n_peace_protomers",
+    "site_search_mode",
+    "reactant_is_zwitterion",
+    "product_is_zwitterion",
     "run_ok",
     "run_returncode",
     "job_messages",
@@ -176,6 +179,21 @@ def _formal_charge(smiles: str) -> int | None:
     return int(Chem.GetFormalCharge(mol))
 
 
+def _is_zwitterion_smiles(smiles: str) -> bool:
+    """Reuse PEACE's zwitterion definition (charged heavy atoms, net charge may be 0)."""
+    from peace.protomer import Protomer
+
+    return bool(Protomer.from_smiles(str(smiles)).is_zwitterion)
+
+
+def _as_bool(value) -> bool:
+    if pd.isna(value):
+        return False
+    if isinstance(value, str):
+        return value.strip().lower() in {"true", "1", "yes"}
+    return bool(value)
+
+
 def preprocess_reactions(
     raw_csv: Path,
     *,
@@ -217,6 +235,9 @@ def preprocess_reactions(
         if charge is None:
             continue
 
+        reactant_zwit = _is_zwitterion_smiles(reactant)
+        product_zwit = _is_zwitterion_smiles(product)
+
         rows.append(
             {
                 "reaction_index": int(row["reaction_index"]),
@@ -233,6 +254,8 @@ def preprocess_reactions(
                 "reactant_smiles_mapped": str(row["reactant_smiles"]),
                 "product_smiles_mapped": str(row["product_smiles"]),
                 "formal_charge": charge,
+                "reactant_is_zwitterion": reactant_zwit,
+                "product_is_zwitterion": product_zwit,
                 "n_reactants": row.get("n_reactants", pd.NA),
                 "n_products": row.get("n_products", pd.NA),
             }
@@ -430,6 +453,8 @@ def _base_row(row: pd.Series) -> dict:
 def main() -> None:
     args, main_extra_args = _build_parser().parse_known_args()
     peace_root = resolve_peace_root(args.peace_root)
+    _ensure_peace_on_path(peace_root)
+    user_set_site_search = "--site-search-mode" in main_extra_args
 
     if args.preprocess_only:
         processed = preprocess_reactions(
@@ -477,6 +502,21 @@ def main() -> None:
         temperature = float(row["temperature"])
         tabulated = pd.to_numeric(row["tabulated_constant"], errors="coerce")
         charge = int(row["formal_charge"]) if "formal_charge" in data.columns else 0
+        if "reactant_is_zwitterion" in data.columns and "product_is_zwitterion" in data.columns:
+            reactant_zwit = _as_bool(row["reactant_is_zwitterion"])
+            product_zwit = _as_bool(row["product_is_zwitterion"])
+        else:
+            reactant_zwit = _is_zwitterion_smiles(reactant)
+            product_zwit = _is_zwitterion_smiles(product)
+        if user_set_site_search:
+            site_search_mode = None
+            site_search_label = "user"
+        elif reactant_zwit or product_zwit:
+            site_search_mode = None
+            site_search_label = "default"
+        else:
+            site_search_mode = "none"
+            site_search_label = "none"
 
         mol_dir = _entry_dir(
             results_root,
@@ -496,7 +536,8 @@ def main() -> None:
 
         print(
             f"[{row_number + 1}/{len(data)}] rxn {reaction_index}: "
-            f"{solvent} T={temperature:g} K seed={reactant}"
+            f"{solvent} T={temperature:g} K site-search={site_search_label} "
+            f"seed={reactant}"
         )
 
         run_ok = False
@@ -523,6 +564,7 @@ def main() -> None:
                 output_csv=output_csv,
                 charge_min=charge,
                 charge_max=charge,
+                site_search_mode=site_search_mode,
                 extra_args=main_extra_args,
             )
             outcome = run_peace_job(
@@ -553,6 +595,9 @@ def main() -> None:
         record = {
             **_base_row(row),
             **score,
+            "site_search_mode": site_search_label,
+            "reactant_is_zwitterion": reactant_zwit,
+            "product_is_zwitterion": product_zwit,
             "run_ok": run_ok,
             "run_returncode": run_returncode,
             "job_messages": job_messages,

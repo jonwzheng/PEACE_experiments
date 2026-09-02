@@ -169,6 +169,7 @@ def build_peace_command(
     temperature: float | None = None,
     charge_min: int | None = None,
     charge_max: int | None = None,
+    site_search_mode: str | None = None,
     extra_args: list[str] | None = None,
 ) -> list[str]:
     cmd = [
@@ -197,6 +198,8 @@ def build_peace_command(
         cmd.extend(["--charge-min", str(charge_min)])
     if charge_max is not None:
         cmd.extend(["--charge-max", str(charge_max)])
+    if site_search_mode is not None:
+        cmd.extend(["--site-search-mode", str(site_search_mode)])
     if extra_args:
         cmd.extend(extra_args)
     return cmd
