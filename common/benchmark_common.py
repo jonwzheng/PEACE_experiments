@@ -17,7 +17,7 @@ from rdkit import Chem
 EXPERIMENTS_ROOT = Path(__file__).resolve().parents[1]
 PEACE_ROOT = EXPERIMENTS_ROOT.parent / "PEACE"
 
-DEFAULT_SCREEN_THRESHOLD = "35.0"
+DEFAULT_SCREEN_THRESHOLD = "80.0"
 DEFAULT_MAX_CONFORMERS = "10"
 
 
