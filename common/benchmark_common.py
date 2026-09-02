@@ -166,6 +166,7 @@ def build_peace_command(
     scratch_root: Path,
     output_csv: Path,
     solvent: str = "water",
+    temperature: float | None = None,
     charge_min: int | None = None,
     charge_max: int | None = None,
     extra_args: list[str] | None = None,
@@ -190,6 +191,8 @@ def build_peace_command(
         "--max-conformers",
         DEFAULT_MAX_CONFORMERS,
     ]
+    if temperature is not None:
+        cmd.extend(["--temperature", str(temperature)])
     if charge_min is not None:
         cmd.extend(["--charge-min", str(charge_min)])
     if charge_max is not None:
@@ -197,6 +200,16 @@ def build_peace_command(
     if extra_args:
         cmd.extend(extra_args)
     return cmd
+
+
+def log10_k_from_delta_g(
+    delta_g_kcal_mol: float,
+    *,
+    temperature_k: float = _DEFAULT_TEMPERATURE_K,
+) -> float:
+    """Convert ΔG (kcal/mol) to log10(K) at the given temperature."""
+    rt_ln10 = _GAS_CONSTANT_KCAL * float(temperature_k) * math.log(10.0)
+    return -float(delta_g_kcal_mol) / rt_ln10
 
 
 @dataclass(frozen=True)
