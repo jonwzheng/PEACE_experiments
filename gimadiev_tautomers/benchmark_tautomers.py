@@ -585,7 +585,6 @@ def main() -> None:
                 only_protomer_search=only_protomer_search,
                 add_tautomers=[product_tautomer] if add_product_tautomer else None,
                 screen_threshold=DEFAULT_SCREEN_THRESHOLD,
-                max_conformers=DEFAULT_MAX_CONFORMERS,
                 embedded_conformers=DEFAULT_EMBEDDED_CONFORMERS,
                 extra_args=main_extra_args,
             )
