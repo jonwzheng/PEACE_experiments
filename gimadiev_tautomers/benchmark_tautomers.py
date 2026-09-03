@@ -27,6 +27,8 @@ from common.benchmark_common import (
     slugify,
 )
 
+DEFAULT_SCREEN_THRESHOLD = "500.0"
+
 DEFAULT_RAW_CSV = SCRIPT_DIR / "data" / "reactions_extracted.csv"
 DEFAULT_PROCESSED_CSV = SCRIPT_DIR / "data" / "reactions_extracted_processed.csv"
 DEFAULT_RESULTS_ROOT = SCRIPT_DIR / "results" / "tautomer_benchmark"
@@ -580,6 +582,7 @@ def main() -> None:
                 site_search_mode=site_search_mode,
                 only_protomer_search=only_protomer_search,
                 add_tautomers=[product_tautomer] if add_product_tautomer else None,
+                screen_threshold=DEFAULT_SCREEN_THRESHOLD,
                 extra_args=main_extra_args,
             )
             outcome = run_peace_job(

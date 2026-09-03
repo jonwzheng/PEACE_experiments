@@ -173,6 +173,7 @@ def build_peace_command(
     site_search_mode: str | None = None,
     add_tautomers: list[str] | None = None,
     only_protomer_search: bool = False,
+    screen_threshold: str | None = None,
     extra_args: list[str] | None = None,
 ) -> list[str]:
     cmd = [
@@ -191,7 +192,7 @@ def build_peace_command(
         str(output_csv),
         "--no-plot",
         "--screen-threshold",
-        DEFAULT_SCREEN_THRESHOLD,
+        screen_threshold if screen_threshold is not None else DEFAULT_SCREEN_THRESHOLD,
         "--max-conformers",
         DEFAULT_MAX_CONFORMERS,
         "--conformer-energy-threshold",
