@@ -17,10 +17,8 @@ from rdkit import Chem
 EXPERIMENTS_ROOT = Path(__file__).resolve().parents[1]
 PEACE_ROOT = EXPERIMENTS_ROOT.parent / "PEACE"
 
-DEFAULT_SCREEN_THRESHOLD = "60.0"
+DEFAULT_SCREEN_THRESHOLD = "35.0"
 DEFAULT_MAX_CONFORMERS = "10"
-DEFAULT_CONFORMER_ENERGY_THRESHOLD = "40.0"
-DEFAULT_EMBEDDED_CONFORMERS = "500"
 
 def slugify(value: str) -> str:
     value = value.strip().lower()
@@ -174,6 +172,7 @@ def build_peace_command(
     add_tautomers: list[str] | None = None,
     only_protomer_search: bool = False,
     screen_threshold: str | None = None,
+    embedded_conformers: str | None = None,
     extra_args: list[str] | None = None,
 ) -> list[str]:
     cmd = [
@@ -195,10 +194,6 @@ def build_peace_command(
         screen_threshold if screen_threshold is not None else DEFAULT_SCREEN_THRESHOLD,
         "--max-conformers",
         DEFAULT_MAX_CONFORMERS,
-        "--conformer-energy-threshold",
-        DEFAULT_CONFORMER_ENERGY_THRESHOLD,
-        "--embedded-conformers",
-        DEFAULT_EMBEDDED_CONFORMERS,
     ]
     if temperature is not None:
         cmd.extend(["--temperature", str(temperature)])
@@ -213,6 +208,8 @@ def build_peace_command(
     if add_tautomers:
         for tautomer_smiles in add_tautomers:
             cmd.extend(["--add-tautomers", tautomer_smiles])
+    if embedded_conformers is not None:
+        cmd.extend(["--embedded-conformers", str(embedded_conformers)])
     if extra_args:
         cmd.extend(extra_args)
     return cmd

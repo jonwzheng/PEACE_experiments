@@ -28,6 +28,8 @@ from common.benchmark_common import (
 )
 
 DEFAULT_SCREEN_THRESHOLD = "500.0"
+DEFAULT_CONFORMER_ENERGY_THRESHOLD = "40.0"
+DEFAULT_EMBEDDED_CONFORMERS = "500"
 
 DEFAULT_RAW_CSV = SCRIPT_DIR / "data" / "reactions_extracted.csv"
 DEFAULT_PROCESSED_CSV = SCRIPT_DIR / "data" / "reactions_extracted_processed.csv"
@@ -583,6 +585,8 @@ def main() -> None:
                 only_protomer_search=only_protomer_search,
                 add_tautomers=[product_tautomer] if add_product_tautomer else None,
                 screen_threshold=DEFAULT_SCREEN_THRESHOLD,
+                max_conformers=DEFAULT_MAX_CONFORMERS,
+                embedded_conformers=DEFAULT_EMBEDDED_CONFORMERS,
                 extra_args=main_extra_args,
             )
             outcome = run_peace_job(
