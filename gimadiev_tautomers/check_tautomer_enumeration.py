@@ -24,14 +24,11 @@ if str(EXPERIMENTS_ROOT) not in sys.path:
 from common.benchmark_common import PEACE_ROOT, resolve_peace_root
 
 from benchmark_tautomers import (
-    DEFAULT_PROCESSED_CSV,
-    DEFAULT_RAW_CSV,
+    DATASETS,
     _ensure_peace_on_path,
     _smiles_match_keys,
-    preprocess_reactions,
+    ensure_processed_csv,
 )
-
-DEFAULT_OUTPUT_CSV = SCRIPT_DIR / "results" / "tautomer_enumeration" / "enumeration_coverage.csv"
 
 
 def _build_parser() -> argparse.ArgumentParser:
@@ -43,21 +40,30 @@ def _build_parser() -> argparse.ArgumentParser:
         )
     )
     parser.add_argument(
+        "--dataset",
+        choices=sorted(DATASETS),
+        default="extracted",
+        help=(
+            "Named tautomer set: main/extracted (MOESM4), test_set_1 (MOESM2), "
+            "or test_set_2 (MOESM3)."
+        ),
+    )
+    parser.add_argument(
         "--input-csv",
         type=Path,
-        default=DEFAULT_PROCESSED_CSV,
+        default=None,
         help="Processed tautomer-equilibrium CSV.",
     )
     parser.add_argument(
         "--raw-csv",
         type=Path,
-        default=DEFAULT_RAW_CSV,
-        help="Original extraction CSV used if --input-csv is missing.",
+        default=None,
+        help="Corrected extraction CSV used if --input-csv is missing.",
     )
     parser.add_argument(
         "--output-csv",
         type=Path,
-        default=DEFAULT_OUTPUT_CSV,
+        default=None,
         help="Where to write the enumeration coverage table.",
     )
     parser.add_argument(
@@ -105,25 +111,17 @@ def _enumerate_pool(seed_smiles: str, *, site_search_mode: str) -> tuple[list[st
     return spec.get_all_smiles(), len(spec.tautomers)
 
 
-def main() -> None:
-    args = _build_parser().parse_args()
-    peace_root = resolve_peace_root(args.peace_root)
-    _ensure_peace_on_path(peace_root)
-
-    input_csv = args.input_csv.resolve()
-    if not input_csv.exists():
-        print(f"Processed CSV not found at {input_csv}; building it from {args.raw_csv}")
-        preprocess_reactions(
-            args.raw_csv.resolve(),
-            peace_root=peace_root,
-            output_csv=input_csv,
-        )
-
-    data = pd.read_csv(input_csv)
+def enumerate_reactions(
+    data: pd.DataFrame,
+    *,
+    site_search_mode: str,
+    output_csv: Path | None = None,
+) -> pd.DataFrame:
+    """Enumerate tautomers/protomers for each row and record pool membership."""
     required = {"reaction_index", "reactant_smiles", "product_smiles"}
     missing = required - set(data.columns)
     if missing:
-        raise ValueError(f"{input_csv} is missing required columns: {sorted(missing)}")
+        raise ValueError(f"Enumeration input is missing required columns: {sorted(missing)}")
 
     pool_cache: dict[str, tuple[list[str], int]] = {}
     rows: list[dict] = []
@@ -137,7 +135,7 @@ def main() -> None:
         if reactant not in pool_cache:
             pool_cache[reactant] = _enumerate_pool(
                 reactant,
-                site_search_mode=args.site_search_mode,
+                site_search_mode=site_search_mode,
             )
         pool, n_tautomers = pool_cache[reactant]
         pool_keys = [_smiles_match_keys(smi) for smi in pool]
@@ -159,7 +157,7 @@ def main() -> None:
                 "reaction_index": reaction_index,
                 "reactant_smiles": reactant,
                 "product_smiles": product,
-                "site_search_mode": args.site_search_mode,
+                "site_search_mode": site_search_mode,
                 "n_enumerated_tautomers": n_tautomers,
                 "n_enumerated_protomers": len(pool),
                 "reactant_in_pool": reactant_present,
@@ -170,13 +168,39 @@ def main() -> None:
             }
         )
 
-    out_path = args.output_csv.resolve()
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-    pd.DataFrame(rows).to_csv(out_path, index=False)
-    print(f"Saved enumeration coverage to: {out_path}")
+    coverage = pd.DataFrame(rows)
+    if output_csv is not None:
+        output_csv.parent.mkdir(parents=True, exist_ok=True)
+        coverage.to_csv(output_csv, index=False)
+        print(f"Saved enumeration coverage to: {output_csv}")
     print(
         f"Reactant in pool: {n_reactant_found}/{len(data)}; "
         f"product in pool: {n_product_found}/{len(data)}"
+    )
+    return coverage
+
+
+def main() -> None:
+    args = _build_parser().parse_args()
+    spec = DATASETS[args.dataset]
+    peace_root = resolve_peace_root(args.peace_root)
+    _ensure_peace_on_path(peace_root)
+
+    input_csv = (args.input_csv or spec["processed_csv"]).resolve()
+    raw_csv = (args.raw_csv or spec["raw_csv"]).resolve()
+    output_csv = (args.output_csv or spec["coverage_csv"]).resolve()
+    ensure_processed_csv(
+        spec,
+        raw_csv=raw_csv,
+        processed_csv=input_csv,
+        peace_root=peace_root,
+    )
+
+    data = pd.read_csv(input_csv)
+    enumerate_reactions(
+        data,
+        site_search_mode=args.site_search_mode,
+        output_csv=output_csv,
     )
 
 

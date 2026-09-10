@@ -27,13 +27,16 @@ from common.benchmark_common import (
     slugify,
 )
 
+from parse_rdf import DATASETS, prepare_dataset, write_extracted_csv
+
 DEFAULT_SCREEN_THRESHOLD = "500.0"
 DEFAULT_CONFORMER_ENERGY_THRESHOLD = "40.0"
 DEFAULT_EMBEDDED_CONFORMERS = "500"
 
-DEFAULT_RAW_CSV = SCRIPT_DIR / "data" / "reactions_extracted.csv"
-DEFAULT_PROCESSED_CSV = SCRIPT_DIR / "data" / "reactions_extracted_processed.csv"
-DEFAULT_RESULTS_ROOT = SCRIPT_DIR / "results" / "tautomer_benchmark"
+DEFAULT_RAW_CSV = DATASETS["main"]["raw_csv"]
+DEFAULT_PROCESSED_CSV = DATASETS["main"]["processed_csv"]
+DEFAULT_RESULTS_ROOT = DATASETS["main"]["results_root"]
+DEFAULT_COVERAGE_CSV = DATASETS["main"]["coverage_csv"]
 SUMMARY_NAME = "benchmark_tautomers_results.csv"
 ENERGY_COL = "solution_phase_free_energy_kcal_mol"
 
@@ -82,29 +85,55 @@ SUMMARY_COLUMNS = [
 def _build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description=(
-            "Benchmark PEACE tautomer free-energy ratios against Gimadiev extracted "
-            "equilibria (data/reactions_extracted_processed.csv). Runs peace.main "
-            "with --solvation on the reactant, --add-tautomers for the product, "
-            "--only-protomer-search, and --site-search-mode none so only those two "
-            "structures are scored."
+            "Benchmark PEACE tautomer free-energy ratios against Gimadiev equilibria. "
+            "For test_set_1 / test_set_2, tautomer enumeration runs first and PEACE "
+            "is scored only on pairs whose product is found in the enumerated pool."
         )
+    )
+    parser.add_argument(
+        "--dataset",
+        choices=sorted(DATASETS),
+        default="extracted",
+        help=(
+            "Named tautomer set: main/extracted (MOESM4), test_set_1 (MOESM2), "
+            "or test_set_2 (MOESM3). Scripts use the corrected CSVs."
+        ),
     )
     parser.add_argument(
         "--input-csv",
         type=Path,
-        default=DEFAULT_PROCESSED_CSV,
-        help="Processed tautomer-equilibrium CSV (created by --preprocess-only if missing).",
+        default=None,
+        help="Processed tautomer-equilibrium CSV (created from --raw-csv if missing).",
     )
     parser.add_argument(
         "--raw-csv",
         type=Path,
-        default=DEFAULT_RAW_CSV,
-        help="Original atom-mapped Gimadiev extraction CSV used for preprocessing.",
+        default=None,
+        help="Corrected atom-mapped extraction CSV (original RDF extract plus data_to_correct.csv).",
+    )
+    parser.add_argument(
+        "--coverage-csv",
+        type=Path,
+        default=None,
+        help="Enumeration coverage table written/read when --enumerate-first is set.",
     )
     parser.add_argument(
         "--preprocess-only",
         action="store_true",
-        help="Rebuild reactions_extracted_processed.csv from --raw-csv and exit.",
+        help=(
+            "Rebuild the processed CSV from the corrected --raw-csv "
+            "(preparing original/corrected extracts if needed) and exit."
+        ),
+    )
+    parser.add_argument(
+        "--enumerate-first",
+        action=argparse.BooleanOptionalAction,
+        default=None,
+        help=(
+            "Run tautomer enumeration first and keep only rows whose enumerated "
+            "pool includes the target product. Default: on for test_set_1/2, off "
+            "for main/extracted."
+        ),
     )
     parser.add_argument(
         "--limit",
@@ -211,7 +240,6 @@ def preprocess_reactions(
     raw = pd.read_csv(raw_csv)
     required = {
         "reaction_index",
-        "tabulated_constant",
         "temperature",
         "solvent",
         "solvent_part",
@@ -247,7 +275,9 @@ def preprocess_reactions(
         rows.append(
             {
                 "reaction_index": int(row["reaction_index"]),
-                "tabulated_constant": pd.to_numeric(row["tabulated_constant"], errors="coerce"),
+                "tabulated_constant": pd.to_numeric(
+                    row.get("tabulated_constant", pd.NA), errors="coerce"
+                ),
                 "temperature": pd.to_numeric(row["temperature"], errors="coerce"),
                 "temperature_celsius": pd.to_numeric(
                     row.get("temperature_celsius", pd.NA), errors="coerce"
@@ -275,6 +305,33 @@ def preprocess_reactions(
     out_path.parent.mkdir(parents=True, exist_ok=True)
     processed.to_csv(out_path, index=False)
     return processed
+
+
+def ensure_raw_csv(spec: dict, raw_csv: Path) -> Path:
+    """Ensure original RDF extracts exist and write the corrected CSV used by benchmarks."""
+    if raw_csv.resolve() == Path(spec["raw_csv"]).resolve():
+        prepare_dataset(spec, include_processed=False, include_results=False)
+        return Path(spec["raw_csv"])
+    if raw_csv.exists():
+        return raw_csv
+    rdf_path = spec.get("rdf")
+    if rdf_path is None:
+        raise FileNotFoundError(f"Raw CSV not found at {raw_csv}")
+    print(f"Raw CSV not found at {raw_csv}; parsing {rdf_path}")
+    write_extracted_csv(
+        Path(rdf_path),
+        raw_csv,
+        index_mode=spec.get("index_mode", "mireg"),
+    )
+    return raw_csv
+
+
+def ensure_processed_csv(spec: dict, *, raw_csv: Path, processed_csv: Path, peace_root: Path) -> Path:
+    ensure_raw_csv(spec, raw_csv)
+    if not processed_csv.exists():
+        print(f"Processed CSV not found at {processed_csv}; building it from {raw_csv}")
+        preprocess_reactions(raw_csv, peace_root=peace_root, output_csv=processed_csv)
+    return processed_csv
 
 
 def _smiles_match_keys(smiles: str) -> tuple[str | None, str | None]:
@@ -469,27 +526,39 @@ def _base_row(row: pd.Series) -> dict:
 
 def main() -> None:
     args, main_extra_args = _build_parser().parse_known_args()
+    spec = DATASETS[args.dataset]
     peace_root = resolve_peace_root(args.peace_root)
     _ensure_peace_on_path(peace_root)
     user_set_site_search = "--site-search-mode" in main_extra_args
 
-    if args.preprocess_only:
-        processed = preprocess_reactions(
-            args.raw_csv.resolve(),
-            peace_root=peace_root,
-            output_csv=args.input_csv.resolve(),
-        )
-        print(f"Wrote {len(processed)} processed rows to {args.input_csv.resolve()}")
-        return
+    raw_csv = (args.raw_csv or spec["raw_csv"]).resolve()
+    input_csv = (args.input_csv or spec["processed_csv"]).resolve()
+    coverage_csv = (args.coverage_csv or spec["coverage_csv"]).resolve()
+    results_root = (
+        args.results_root.resolve()
+        if "--results-root" in sys.argv
+        else Path(spec["results_root"]).resolve()
+    )
+    enumerate_first = (
+        spec["enumerate_first"] if args.enumerate_first is None else args.enumerate_first
+    )
 
-    input_csv = args.input_csv.resolve()
-    if not input_csv.exists():
-        print(f"Processed CSV not found at {input_csv}; building it from {args.raw_csv}")
-        preprocess_reactions(
-            args.raw_csv.resolve(),
+    if args.preprocess_only:
+        ensure_raw_csv(spec, raw_csv)
+        processed = preprocess_reactions(
+            raw_csv,
             peace_root=peace_root,
             output_csv=input_csv,
         )
+        print(f"Wrote {len(processed)} processed rows to {input_csv}")
+        return
+
+    ensure_processed_csv(
+        spec,
+        raw_csv=raw_csv,
+        processed_csv=input_csv,
+        peace_root=peace_root,
+    )
 
     data = pd.read_csv(input_csv)
     required = {
@@ -498,13 +567,42 @@ def main() -> None:
         "product_smiles",
         "solvent",
         "temperature",
-        "tabulated_constant",
     }
     missing = required - set(data.columns)
     if missing:
         raise ValueError(f"{input_csv} is missing required columns: {sorted(missing)}")
+    if "tabulated_constant" not in data.columns:
+        data["tabulated_constant"] = pd.NA
 
-    results_root = args.results_root.resolve()
+    if enumerate_first:
+        from check_tautomer_enumeration import enumerate_reactions
+
+        if coverage_csv.exists() and not args.force_rerun:
+            coverage = pd.read_csv(coverage_csv)
+            print(f"Loaded enumeration coverage from {coverage_csv}")
+        else:
+            coverage = enumerate_reactions(
+                data,
+                site_search_mode="default",
+                output_csv=coverage_csv,
+            )
+        if "product_in_pool" not in coverage.columns:
+            raise ValueError(f"{coverage_csv} is missing column 'product_in_pool'.")
+        keep = set(
+            coverage.loc[coverage["product_in_pool"].astype(bool), "reaction_index"].astype(int)
+        )
+        n_before = len(data)
+        data = data[data["reaction_index"].astype(int).isin(keep)].copy()
+        data = data.reset_index(drop=True)
+        print(
+            f"Keeping {len(data)} / {n_before} equilibria whose enumerated pool "
+            f"includes the target product."
+        )
+        if data.empty:
+            raise ValueError(
+                "No equilibria remained after requiring the product in the enumerated pool."
+            )
+
     results_root.mkdir(parents=True, exist_ok=True)
     summary_path = results_root / SUMMARY_NAME
     completed = {} if args.rescore_only else _load_summary(summary_path)

@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import sys
 from pathlib import Path
 
 import matplotlib.pyplot as plt
@@ -12,13 +13,11 @@ import pandas as pd
 from matplotlib.ticker import FuncFormatter, MaxNLocator, MultipleLocator
 
 SCRIPT_DIR = Path(__file__).resolve().parent
-DEFAULT_BENCHMARK_CSV = (
-    SCRIPT_DIR / "results" / "tautomer_benchmark" / "benchmark_tautomers_results.csv"
-)
-DEFAULT_COVERAGE_CSV = (
-    SCRIPT_DIR / "results" / "tautomer_enumeration" / "enumeration_coverage.csv"
-)
-DEFAULT_OUTPUT_DIR = SCRIPT_DIR / "results" / "tautomer_benchmark"
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
+
+from benchmark_tautomers import DATASETS
+from parse_rdf import canonical_dataset_name
 
 
 def _build_parser() -> argparse.ArgumentParser:
@@ -30,15 +29,24 @@ def _build_parser() -> argparse.ArgumentParser:
         )
     )
     parser.add_argument(
+        "--dataset",
+        choices=sorted(DATASETS),
+        default="extracted",
+        help=(
+            "Named tautomer set: main/extracted (MOESM4), test_set_1 (MOESM2), "
+            "or test_set_2 (MOESM3)."
+        ),
+    )
+    parser.add_argument(
         "--benchmark-csv",
         type=Path,
-        default=DEFAULT_BENCHMARK_CSV,
+        default=None,
         help="Aggregate benchmark CSV produced by benchmark_tautomers.py.",
     )
     parser.add_argument(
         "--coverage-csv",
         type=Path,
-        default=DEFAULT_COVERAGE_CSV,
+        default=None,
         help=(
             "Enumeration coverage table; analysis is restricted to rows where "
             "both reactant and product were found in the enumerated pool."
@@ -47,8 +55,13 @@ def _build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=DEFAULT_OUTPUT_DIR,
+        default=None,
         help="Directory for saved figures.",
+    )
+    parser.add_argument(
+        "--no-coverage-filter",
+        action="store_true",
+        help="Plot every scored row, even if enumeration did not find the product.",
     )
     return parser
 
@@ -69,37 +82,57 @@ def _gaussian_kde_density(x: np.ndarray, y: np.ndarray) -> np.ndarray:
 
 def main() -> None:
     args = _build_parser().parse_args()
-    benchmark_csv = args.benchmark_csv.resolve()
-    output_dir = args.output_dir.resolve()
+    spec = DATASETS[args.dataset]
+    benchmark_csv = (args.benchmark_csv or (Path(spec["results_root"]) / "benchmark_tautomers_results.csv")).resolve()
+    coverage_csv = (args.coverage_csv or spec["coverage_csv"]).resolve()
+    output_dir = (args.output_dir or spec["results_root"]).resolve()
     output_dir.mkdir(parents=True, exist_ok=True)
+    plot_stem = spec.get("plot_stem", f"{args.dataset}_kt_scatter_log10")
 
     df = pd.read_csv(benchmark_csv)
-    coverage = pd.read_csv(args.coverage_csv.resolve())
-    required = {"reaction_index", "reactant_in_pool", "product_in_pool"}
-    missing = required - set(coverage.columns)
-    if missing:
-        raise ValueError(f"{args.coverage_csv} is missing columns: {sorted(missing)}")
-    covered = coverage.loc[
-        coverage["reactant_in_pool"].astype(bool)
-        & coverage["product_in_pool"].astype(bool),
-        "reaction_index",
-    ].astype(int)
-    n_before = len(df)
-    df = df[df["reaction_index"].astype(int).isin(set(covered))].copy()
-    print(
-        f"Restricted to enumerated reactant+product pairs: "
-        f"{len(df)} / {n_before} benchmark rows "
-        f"({covered.nunique()} coverage indices)."
-    )
-    if len(df) != 191:
-        print(f"Warning: expected 191 entries after coverage filter, found {len(df)}.")
+    if not args.no_coverage_filter:
+        if not coverage_csv.exists():
+            raise FileNotFoundError(
+                f"Coverage CSV not found at {coverage_csv}. "
+                f"Run check_tautomer_enumeration.py --dataset {args.dataset} "
+                "or pass --no-coverage-filter."
+            )
+        coverage = pd.read_csv(coverage_csv)
+        required = {"reaction_index", "reactant_in_pool", "product_in_pool"}
+        missing = required - set(coverage.columns)
+        if missing:
+            raise ValueError(f"{coverage_csv} is missing columns: {sorted(missing)}")
+        covered = coverage.loc[
+            coverage["reactant_in_pool"].astype(bool)
+            & coverage["product_in_pool"].astype(bool),
+            "reaction_index",
+        ].astype(int)
+        n_before = len(df)
+        df = df[df["reaction_index"].astype(int).isin(set(covered))].copy()
+        print(
+            f"Restricted to enumerated reactant+product pairs: "
+            f"{len(df)} / {n_before} benchmark rows "
+            f"({covered.nunique()} coverage indices)."
+        )
+        if canonical_dataset_name(args.dataset) == "main" and len(df) != 191:
+            print(f"Warning: expected 191 main/extracted entries after coverage filter, found {len(df)}.")
 
+    if "tabulated_constant" not in df.columns:
+        raise ValueError(f"{benchmark_csv} is missing column 'tabulated_constant'.")
     kt_exp = pd.to_numeric(df["tabulated_constant"], errors="coerce").to_numpy()
     kt_pred = pd.to_numeric(df["predicted_log10Kz"], errors="coerce").to_numpy()
     valid = np.isfinite(kt_exp) & np.isfinite(kt_pred)
     kt_exp_valid = kt_exp[valid]
     kt_pred_valid = kt_pred[valid]
     df_valid = df.loc[valid].reset_index(drop=True)
+    if len(kt_exp_valid) == 0:
+        n_exp = int(np.isfinite(kt_exp).sum())
+        n_pred = int(np.isfinite(kt_pred).sum())
+        raise ValueError(
+            f"No rows with both experimental tabulated_constant and predicted_log10Kz "
+            f"({n_exp} experimental, {n_pred} predicted). "
+            "test_set_1 RDF records do not include tabulated constants."
+        )
 
     log10_kt_equal = 0.0
     reactant_region = (kt_exp_valid < log10_kt_equal) & (kt_pred_valid < log10_kt_equal)
@@ -192,8 +225,9 @@ def main() -> None:
     )
 
     plt.tight_layout()
-    plt.savefig(output_dir / "gimadiev_kt_scatter_log10.svg", bbox_inches="tight", transparent=True)
-    plt.savefig(output_dir / "gimadiev_kt_scatter_log10.png", dpi=300, bbox_inches="tight", transparent=True)
+    plt.savefig(output_dir / f"{plot_stem}.svg", bbox_inches="tight", transparent=True)
+    plt.savefig(output_dir / f"{plot_stem}.png", dpi=300, bbox_inches="tight", transparent=True)
+    print(f"Wrote {output_dir / plot_stem}.png")
 
 
 if __name__ == "__main__":

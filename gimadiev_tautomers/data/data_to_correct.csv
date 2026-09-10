@@ -1,22 +1,14 @@
-reaction_index,corrected_tabulated_constant,original_tabulated_constant,temperature,solvent,reactant_smiles,product_smiles,error_reason,source
-175,-5.3,5.3,294,water,Nc1ccccn1,N=c1cccc[nH]1,Palm tabulation,https://doi.org/10.1039/JR9520001461
-176,-6.16,6.16,308,water,Nc1ccccn1,N=c1cccc[nH]1,Palm tabulation,https://doi.org/10.1039/P29730002111
-177,-3.3,3.3,294,water,Nc1ccncc1,N=c1cc[nH]cc1,Palm tabulation,https://doi.org/10.1039/JR9520001461
-178,-4.3,4.3,294,water,Nc1nccs1,N=c1[nH]ccs1,Palm tabulation,https://doi.org/10.1039/JR9520001461
-179,-5.3,5.3,294,water,Nc1nc(N)nc(N)n1,N=c1nc(N)nc(N)[nH]1,Palm tabulation,https://doi.org/10.1039/JR9520001461
-291,-8.3,8.3,298,water,NC(=S)c1ccccc1,N=C(S)c1ccccc1,Palm tabulation,https://doi.org/10.3891/acta.chem.scand.27-0209
-292,-9.6,9.6,298,water,CNC(C)=S,C/N=C(/C)S,Palm tabulation,https://doi.org/10.3891/acta.chem.scand.27-0209
-293,-8.9,8.9,298,water,CNC(=S)c1ccccc1,C/N=C(\S)c1ccccc1,Palm tabulation,https://doi.org/10.3891/acta.chem.scand.27-0209
-384,-3.3,3.3,294,water,Nc1ccnc2ccccc12,N=c1cc[nH]c2ccccc12,Palm tabulation,https://doi.org/10.1039/JR9520001461
-397,REMOVE,7,293,water,Oc1cccc2cc3ccccc3nc12,[O-]c1cccc2cc3ccccc3[nH+]c12,"Indeterminate. Tabulated as a pyridol-pyridine tautomerism, but digitized as a zwitterion. Print source does not indicate an apparent value of 7 for anything.",https://doi.org/10.1039/JR9560001294
-399,-12.82,12.82,308,water,c1ccc(C(c2ccccc2)c2ccccn2)cc1,C1=CN/C(=C(\c2ccccc2)c2ccccc2)C=C1,Palm tabulation,https://doi.org/10.1039/P29730002111
-400,-11.88,11.88,308,water,c1ccc(Cc2ccccn2)cc1,C1=CN/C(=C/c2ccccc2)C=C1,Palm tabulation,https://doi.org/10.1039/P29730002111
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,,
-,,,,,,,, 
+reaction_index,corrected_tabulated_constant,original_tabulated_constant,temperature,solvent,reactant_smiles,product_smiles,error_reason,source,set
+175,-5.3,5.3,294,water,Nc1ccccn1,N=c1cccc[nH]1,Palm tabulation,https://doi.org/10.1039/JR9520001461,original
+176,-6.16,6.16,308,water,Nc1ccccn1,N=c1cccc[nH]1,Palm tabulation,https://doi.org/10.1039/P29730002111,original
+177,-3.3,3.3,294,water,Nc1ccncc1,N=c1cc[nH]cc1,Palm tabulation,https://doi.org/10.1039/JR9520001461,original
+178,-4.3,4.3,294,water,Nc1nccs1,N=c1[nH]ccs1,Palm tabulation,https://doi.org/10.1039/JR9520001461,original
+179,-5.3,5.3,294,water,Nc1nc(N)nc(N)n1,N=c1nc(N)nc(N)[nH]1,Palm tabulation,https://doi.org/10.1039/JR9520001461,original
+291,-8.3,8.3,298,water,NC(=S)c1ccccc1,N=C(S)c1ccccc1,Palm tabulation,https://doi.org/10.3891/acta.chem.scand.27-0209,original
+292,-9.6,9.6,298,water,CNC(C)=S,C/N=C(/C)S,Palm tabulation,https://doi.org/10.3891/acta.chem.scand.27-0209,original
+293,-8.9,8.9,298,water,CNC(=S)c1ccccc1,C/N=C(\S)c1ccccc1,Palm tabulation,https://doi.org/10.3891/acta.chem.scand.27-0209,original
+384,-3.3,3.3,294,water,Nc1ccnc2ccccc12,N=c1cc[nH]c2ccccc12,Palm tabulation,https://doi.org/10.1039/JR9520001461,original
+397,REMOVE,7,293,water,Oc1cccc2cc3ccccc3nc12,[O-]c1cccc2cc3ccccc3[nH+]c12,"Indeterminate. Tabulated as a pyridol-pyridine tautomerism, but digitized as a zwitterion. Print source does not indicate an apparent value of 7 for anything.",https://doi.org/10.1039/JR9560001294,original
+399,-12.82,12.82,308,water,c1ccc(C(c2ccccc2)c2ccccn2)cc1,C1=CN/C(=C(\c2ccccc2)c2ccccc2)C=C1,Palm tabulation,https://doi.org/10.1039/P29730002111,original
+400,-11.88,11.88,308,water,c1ccc(Cc2ccccn2)cc1,C1=CN/C(=C/c2ccccc2)C=C1,Palm tabulation,https://doi.org/10.1039/P29730002111,original
+8,-8.6,8.6,298,water,CC(N)=S,CC(=N)S,Palm tabulation,https://doi.org/10.3891/acta.chem.scand.27-0209,test_set_2

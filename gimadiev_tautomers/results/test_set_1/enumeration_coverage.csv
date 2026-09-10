@@ -1,0 +1,14 @@
+reaction_index,reactant_smiles,product_smiles,site_search_mode,n_enumerated_tautomers,n_enumerated_protomers,reactant_in_pool,product_in_pool,reactant_match_mode,product_match_mode,enumerated_smiles
+1,CC(=O)CC(C)=O,CC(=O)/C=C(\C)O,default,5,5,True,True,isomeric,nonisomeric,C=C(O)C=C(C)O|CC(=O)C=C(C)O|C=C(O)CC(C)=O|C=C(O)CC(=C)O|CC(=O)CC(C)=O
+2,CCOC(=O)CC(C)=O,CCOC(=O)/C=C(\C)O,default,2,2,True,True,isomeric,nonisomeric,CCOC(=O)C=C(C)O|CCOC(=O)CC(C)=O
+3,CC(=O)CC(C)=O,CC(=O)/C=C(\C)O,default,5,5,True,True,isomeric,nonisomeric,C=C(O)C=C(C)O|CC(=O)C=C(C)O|C=C(O)CC(C)=O|C=C(O)CC(=C)O|CC(=O)CC(C)=O
+5,CN/C(C)=C\c1ccccc1,C/N=C(\C)Cc1ccccc1,default,2,2,True,True,isomeric,nonisomeric,CN/C(C)=C\c1ccccc1|CN=C(C)Cc1ccccc1
+6,C(=C(\Nc1ccccc1)c1ccccc1)\c1ccccc1,c1ccc(C/C(=N/c2ccccc2)c2ccccc2)cc1,default,2,2,True,True,isomeric,nonisomeric,c1ccc(CC(=Nc2ccccc2)c2ccccc2)cc1|C(=C(\Nc1ccccc1)c1ccccc1)\c1ccccc1
+7,Oc1ccccn1,O=c1cccc[nH]1,default,3,4,True,True,isomeric,isomeric,O=C1CC=CC=N1|Oc1ccccn1|O=c1cccc[nH]1|[O-]c1cccc[nH+]1
+8,Oc1ccc2cnccc2c1,O=c1ccc2c[nH]ccc-2c1,default,3,4,True,True,isomeric,isomeric,Oc1ccc2cnccc2c1|[O-]c1ccc2c[nH+]ccc2c1|O=C1C=c2ccncc2=CC1|O=c1ccc2c[nH]ccc-2c1
+12,CC(C)/N=C/c1ccccc1O,CC(C)N/C=C1/C=CC=CC1=O,default,3,4,True,True,isomeric,nonisomeric,CC(C)/N=C/c1ccccc1O|CC(C)NC=C1C=CC=CC1=O|CC(C)/[NH+]=C/c1ccccc1[O-]|CC(C)N=CC1=CC=CCC1=O
+14,CCCCN/C=C1\C=CC=CC1=S,CCCC/N=C/c1ccccc1S,default,3,4,True,True,isomeric,nonisomeric,CCCCN/C=C1\C=CC=CC1=S|CCCCN=Cc1ccccc1S|CCCCN=CC1=CC=CCC1=S|CCCC[NH+]=Cc1ccccc1[S-]
+15,S=C1C=CC=C/C1=C\Nc1ccccc1,Sc1ccccc1/C=N/c1ccccc1,default,4,5,True,True,isomeric,nonisomeric,Sc1ccccc1C=Nc1ccccc1|S=C1C=CC=C/C1=C\Nc1ccccc1|S=C1CC=CC=C1C=Nc1ccccc1|S=C1C=CC=CC1C=Nc1ccccc1|[S-]c1ccccc1C=[NH+]c1ccccc1
+17,Oc1cnc2ccccc2c1,[O-]c1c[nH+]c2ccccc2c1,default,2,3,True,True,isomeric,isomeric,O=C1C=c2ccccc2=NC1|[O-]c1c[nH+]c2ccccc2c1|Oc1cnc2ccccc2c1
+18,CC(=O)CCCO,CC1(O)CCCO1,default,3,3,True,False,isomeric,,CC(O)=CCCO|C=C(O)CCCO|CC(=O)CCCO
+20,CC(=O)CCCCO,CC1(O)CCCCO1,default,3,3,True,False,isomeric,,CC(O)=CCCCO|CC(=O)CCCCO|C=C(O)CCCCO
